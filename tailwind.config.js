@@ -48,6 +48,11 @@ module.exports = {
           letterSpacing: '0',
           fontWeight: '500',
         }],
+        'banner-desktop': ['11vw', {
+          lineHeight: '12vw',
+          letterSpacing: '0',
+          fontWeight: '500',
+        }],
       }
     },
   },

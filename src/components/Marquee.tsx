@@ -38,8 +38,8 @@ const Marquee = (props: Props) => {
         <AnimatedTitle text="frontend" />
       </motion.ul>
       <motion.ul variants={marqueeVariants}  animate='animate' className='flex justify-around flex-shrink-0 min-w-full gap-40 px-20' aria-hidden="true">
-        <li className='text-banner-mobile xl:text-11xl text-transparent font-sans xl:font-black font-black text-stroke'>frontend</li>
-        <li className='text-banner-mobile xl:text-11xl text-transparent font-sans font-black xl:font-black text-stroke'>frontend</li>
+        <li className='text-banner-mobile lg:text-banner-desktop text-transparent font-sans xl:font-black font-black text-stroke'>frontend</li>
+        <li className='text-banner-mobile lg:text-banner-desktop text-transparent font-sans font-black xl:font-black text-stroke'>frontend</li>
       </motion.ul>
     </div>
   )

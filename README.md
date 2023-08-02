@@ -7,5 +7,5 @@ This project embraces the power and flexibility of Tailwind CSS, a cutting-edge 
 Libraries:
 -react-icons
 -react-social-icons
--framer motion
+-framer motion: Smooth Loading Transitions, 
 -react-simple-typewriter

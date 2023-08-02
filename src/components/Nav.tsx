@@ -1,12 +1,21 @@
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-type Props = {}
+import { usePathname } from 'next/navigation';
+import Curve from './Curve'
+type Props = {
+  setIsActive: (isActive: boolean) => void;
+  isActive: boolean
+}
 
-const Nav = (props: Props) => {
+const Nav = ({setIsActive, isActive}: Props) => {
+
+  const pathname = usePathname()
+  const [selectedIndicator, setSelectedIndicator] = useState(pathname)
+
   const menuSlide = {
     initial: {
-      x: '100%',
+      x: "calc(100% + 100px)",
     },
     animate: {
       x: '0%',
@@ -16,7 +25,7 @@ const Nav = (props: Props) => {
       }
     },
     exit: {
-      x: '100%',
+      x: "calc(100% + 100px)",
       transition: {
         duration: 1.2,
         ease: [0.76, 0.01, 0.24, 1]
@@ -63,19 +72,20 @@ const Nav = (props: Props) => {
 
   return (
   
-  <motion.div variants={menuSlide} initial="initial" animate="animate" exit="exit"  className=' h-full fixed right-0 bg-slate-200 flex items-start justify-between px-10 mx-auto z-20 border-2 border-x-darkest-dark'>
-    <motion.div variants={linkContainer} initial="initial" animate="animate" exit="exit" className='flex flex-col justify-between items-start gap-8 pt-16'>
-      <motion.p variants={linkVariants} initial="initial" animate="animate" exit="exit" className="text-xl text-darkest-dark font-sans border-b-darkest-dark border-b-2 w-full">Menu</motion.p>
-      <motion.div variants={linkVariants} >
-        <Link href="#about"><button className='text-4xl text-darkest-dark font-roboto w-full' >My story</button></Link>
+  <motion.div  variants={menuSlide} initial="initial" animate="animate" exit="exit"  className=' h-full fixed right-0 bg-darkest-dark flex items-start justify-between px-10 mx-auto z-20 border-2 border-x-darkest-dark lg:hidden'>
+    <motion.div onMouseLeave={() => {setSelectedIndicator(pathname)}} variants={linkContainer} initial="initial" animate="animate" exit="exit" className='flex flex-col justify-between items-start gap-8 pt-16'>
+      <motion.p variants={linkVariants} initial="initial" animate="animate" exit="exit" className="text-xl text-almost-white font-sans border-b-almost-white border-b-2 w-full">Menu</motion.p>
+      <motion.div variants={linkVariants} onClick={() => {setIsActive(false)}}>
+        <Link href="#about"><button className='text-4xl text-almost-white font-roboto w-full' >My story</button></Link>
       </motion.div>
-      <motion.div variants={linkVariants} >
-        <Link href="#about"><button className='text-4xl text-darkest-dark font-roboto w-full' >Portfolio</button></Link>
+      <motion.div variants={linkVariants} onClick={() => {setIsActive(false)}}>
+        <Link href="#projects"  onMouseEnter={() => {setSelectedIndicator("#about")}}><button className={`text-4xl text-almost-white font-roboto w-full ${selectedIndicator == "#about" ? 'text-red-700' : ''}`} >Portfolio</button></Link>
       </motion.div>
-      <motion.div variants={linkVariants} >
-        <Link href="#about"><button className='text-4xl text-darkest-dark font-roboto w-full' >Skills</button></Link>
+      <motion.div variants={linkVariants} onClick={() => {setIsActive(false)}}>
+        <Link  href="#skills"><button className='text-4xl text-almost-white font-roboto w-full' >Skills</button></Link>
       </motion.div>
     </motion.div>
+    <Curve />
   </motion.div>
   )
 }

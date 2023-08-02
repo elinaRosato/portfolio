@@ -31,7 +31,7 @@ const AnimatedTitle = ({ text }: Props) => {
     }
 
   return (
-    <motion.div variants={titleContainer} initial='hidden' animate='show' className={text=="frontend" ? 'text-banner-mobile xl:text-11xl text-transparent font-sans font-black xl:font-black text-stroke overflow-hidden flex ' : 'overflow-hidden flex text-banner-mobile  xl:text-12xl text-darkest-dark font-roboto z-20'}>
+    <motion.div variants={titleContainer} initial='hidden' animate='show' className={text=="frontend" ? 'text-banner-mobile lg:text-banner-desktop text-transparent font-sans font-black xl:font-black text-stroke overflow-hidden flex ' : 'overflow-hidden flex text-banner-mobile  lg:text-banner-desktop text-darkest-dark font-roboto z-20'}>
       {letters.map((letter, i) => 
         <motion.span variants={letterAnimation} key={i}>{letter}</motion.span>
       )}
