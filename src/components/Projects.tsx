@@ -1,36 +1,60 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Heading from './Heading'
+import ProjectListItem from './ProjectListItem'
+import poppingbubblesImage from '../images/listapp.png'
+import Modal from './Modal'
+
+interface Project {
+  title: string;
+  subtitle: string;
+  src: string;
+}
 
 type Props = {}
 
 const Projects = (props: Props) => {
+  const projects: Project[] = [
+    {
+      title: 'Popping Bubbles',
+      subtitle: 'Computer game',
+      src: '/listapp.png'
+    },
+    {
+      title: 'List Web App',
+      subtitle: 'JavaScript Web App',
+      src: '/test1.png'
+    },
+    {
+      title: 'Baccello Landing Page',
+      subtitle: 'Wordpress site',
+      src: '/test2.png'
+    },
+    {
+      title: 'Porridge ecommerce',
+      subtitle: 'React ecommerce',
+      src: '/test3.png'
+    },
+    {
+      title: 'Intención Elementos',
+      subtitle: 'Html & css',
+      src: '/listapp.png'
+    },
+  ]
+
+  const [modal, setModal] = useState({active: false, index:0})
+
   return (
-    <section id='portfolio' className='snap-start font-roboto' >
-      <div className='min-h-screen pt-20 flex flex-col text-left px-24 items-center justify-evenly mx-auto' >
+    
+    <section id='portfolio' className='relative snap-start font-roboto min-h-[95vh] pt-20 flex flex-col text-left px-24 items-center justify-evenly mx-auto' >
         <Heading text="portfolio" />
-        <ul className='w-full flex flex-col gap-8 pt-10 font-sans'>
-          <li className='text-5xl text-darkest-dark w-full bg-slate-200'>
-            Popping Bubbles
-            <span className='hidden'>Computer game</span>
-          </li>
-          <li className='text-5xl text-darkest-dark w-full'>
-            To-do list
-            <span className='hidden'>Web app</span>
-          </li>
-          <li className='text-5xl text-darkest-dark w-full'>
-            Baccello.io
-            <span className='hidden'>Wordpress ecommerce</span>
-          </li>
-          <li className='text-5xl text-darkest-dark w-full'>
-            Porridge
-            <span className='hidden'>Ecommerce</span>
-          </li>
-          <li className='text-5xl text-darkest-dark w-full'>
-            Phonebook
-            <span>Web app</span>
-          </li>
+        <ul className='w-full'>
+          {projects.map((project, index) => {
+            return(
+              <ProjectListItem key={index} index={index} title={project.title} subtitle={project.subtitle} src={project.src} setModal={setModal} />
+            )
+          })}
         </ul>
-      </div>
+        <Modal modal={modal} projects={projects} />
     </section>
 
 

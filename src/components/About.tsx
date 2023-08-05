@@ -6,7 +6,7 @@ type Props = {}
 const About = (props: Props) => {
   return (
     <section id='about' className='snap-center font-roboto' >
-      <div className='h-screen flex flex-col text-left max-w-7xl px-6 items-center justify-evenly mx-auto' >
+      <div className='h-[95vh] flex flex-col text-left max-w-7xl px-6 items-center justify-evenly mx-auto' >
         <Heading text="My story" />
         <div className='flex flex-col justify-center'>
           <p className=' text-2xl font-medium text-darkest-dark font-sans'>hi, i’m Elina! frontend developer, self-taught and a life-long learner.</p>

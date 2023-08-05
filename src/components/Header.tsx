@@ -22,11 +22,11 @@ const [isActive, setIsActive] = useState(false)
 					</ul>
 				</ nav>
 				<div className='flex flex-row items-center text-darkest-dark cursor-pointer'>
-					<button className='font-roboto font-black text-darkest-dark md:inline-flex text-xl  py-1 border-b-[3px] border-b-darkest-dark border '>Let&apos;s work together</button>
+					<button className='font-roboto font-black text-darkest-dark md:inline-flex text-xl py-1 border-b-[3px] border-b-darkest-dark border-solid  '>download cv</button>
 				</div>
 			</div>
 			<div className='fixed right-0 m-5 z-30 flex flex-row w-full items-center justify-end cursor-pointer lg:hidden'>
-				<div onClick={() => setIsActive(!isActive)} className={`relative w-14 h-14 rounded-full bg-darkest-dark flex flex-col justify-center items-center ${isActive ? 'gap-0' : ' gap-[6px]'}`}>
+				<div onClick={() => setIsActive(!isActive)} className={`relative w-14 h-14 rounded-full bg-accent flex flex-col justify-center items-center ${isActive ? 'gap-0' : ' gap-[6px]'}`}>
 					<div className={`w-2/5 bg-almost-white h-[1px] transition-all duration-200 ${isActive ? ' w-0' : ''}`} />
 					<div className={`w-2/5 bg-almost-white h-[1px] transition-all duration-200 ${isActive ? ' -rotate-45' : ''}`} />
 					<div className={`w-2/5 bg-almost-white h-[1px] transition-all duration-200 ${isActive ? 'rotate-45' : ''}`} />

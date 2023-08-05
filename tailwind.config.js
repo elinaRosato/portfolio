@@ -11,10 +11,12 @@ module.exports = {
       fontFamily: {
         sans: ['var(--font-sans)'],
         roboto: ['var(--font-roboto)'],
+        handwritten: ['var(--font-handwritten)'],
       },
       colors: {
         'darkest-dark': '#202124',
-        'almost-white': '#EFEBE2'
+        'accent': '#3682fd',
+        'almost-white': '#f0eff5'
       },
       width: {
         '128': '32rem',
