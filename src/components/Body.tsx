@@ -7,14 +7,14 @@ type Props = {}
 
 const Body = (props: Props) => {
   return (
-    <div className='lg:mx-6 lg:border-2 lg:border-x-darkest-dark'>
+    <main className='lg:mx-6 lg:border-2 lg:border-x-darkest-dark'>
       <Hero/>
       <About />
       <Projects />
       { /* Skills */ }
       { /* Contact */ }
       { /* Footer */ }
-    </div>
+    </main>
   )
 }
 

@@ -13,7 +13,7 @@ const Hero = (props: Props) => {
   return (
     <section className='snap-start font-sans ' >
       <div className='relative '>
-        <div className='relative pt-20 h-[95vh] flex flex-col overflow-hidden justify-center lg:justify-start'>
+        <div className='relative pt-20 h-screen flex flex-col overflow-hidden justify-center lg:justify-start'>
           <div className='relative flex flex-col  '>
             <div className='pl-6 '>
               <AnimatedTitle text="creative" />
@@ -26,7 +26,7 @@ const Hero = (props: Props) => {
           <div className='absolute self-start  lg:self-end lg:top-[20vh] rotate-12 rounded-full ml-6 lg:mr-28'>
             <p className=' p-2 text-sm lg:text-2xl text-center font-semibold text-accent font-handwritten '>based in Malmö</p>
           </div>
-          <div className='absolute self-start  lg:self-end lg:bottom-[8vh]  ml-6 lg:mr-24'>
+          <div className='absolute self-start  lg:self-end lg:bottom-[12vh]  ml-6 lg:mr-32'>
             <svg className="text-darkest-dark h-24 w-24 transform -rotate-90" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" viewBox="0 0 24 24">
               <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
               <circle cx="12" cy="12" r="9" />

@@ -5,16 +5,16 @@ type Props = {}
 
 const About = (props: Props) => {
 
-  const aboutText = 'font-roboto font-bold text-darkest-dark text-4xl leading-[50px]'
-  const aboutYear = 'text-banner-desktop font-sans font-bold text-stroke-2 text-transparent '
-  const aboutSpan = 'text-5xl font-sans text-stroke text-transparent font-bold'
-  const aboutContainer = ' w-full min-h-[60vh] flex justify-between gap-20 items-center'
+  const aboutText = 'font-roboto font-bold text-darkest-dark text-[2vw] leading-[50px]'
+  const aboutYear = 'text-[12vw] font-sans font-bold text-stroke-2 text-transparent '
+  const aboutSpan = 'text-[2.3vw] font-sans text-stroke text-transparent font-bold'
+  const aboutContainer = ' w-full min-h-[70vh] flex justify-between gap-20 items-center'
 
   return (
-    <section id='about' className='font-roboto px-6 py-48' >
+    <section id='about' className='font-roboto px-[4vw] py-48' >
       <div className=' snap-start min-h-[95vh] flex flex-col text-left max-w-7xl pt-32 items-center justify-evenly mx-auto' >
         <Heading text="My story" />
-        <div className=' flex flex-col gap-20'>
+        <div className=' flex flex-col gap-20  px-[8vw]'>
           <div className={` ${aboutContainer}`}>
             <p className={aboutYear}>2016</p>
             <p className={aboutText}>

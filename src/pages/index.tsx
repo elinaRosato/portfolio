@@ -1,13 +1,13 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import {BsFillMoonStarsFill} from 'react-icons/bs'
-import {AiFillTwitterCircle, AiFillLinkedin, AiFillYoutube} from 'react-icons/ai'
-import Header from '../components/Header'
 import { useEffect, useState } from 'react'
 
-import { Roboto, Open_Sans, Homemade_Apple, Nanum_Pen_Script, Crafty_Girls, Poppins } from 'next/font/google'
+import Header from '../components/Header'
 import Header2 from '../components/Header2'
 import Body from '../components/Body'
+
+import { Roboto, Open_Sans, Homemade_Apple, Nanum_Pen_Script, Crafty_Girls, Poppins } from 'next/font/google'
+
 
 const roboto = Roboto({
   weight: ['400', '500', '700', '900'],
