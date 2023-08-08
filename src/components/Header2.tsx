@@ -20,13 +20,9 @@ function Header2({}: Props) {
 	transition={{
 		duration: 1.5
 	}} 
-	className=' w-full fixed bottom-0 bg-almost-white hidden lg:flex items-center justify-between px-10 mx-auto z-20 border-2 border-y-darkest-dark'>
-
-			<div className='flex flex-row items-center text-darkest-dark cursor-pointer'>
-				<button className='font-roboto font-black text-darkest-dark hidden md:inline-flex text-xl py-1 border-none '>LinkedIn</button>
-			</div>
-			<div className='flex flex-row items-center text-darkest-dark cursor-pointer'>
-				<button className='font-sans font-medium text-darkest-dark md:inline-flex text-xl  py-1 border-none'>rosatoelina@gmail.com</button>
+	className=' w-full fixed bottom-0 bg-transparent hidden lg:flex items-center justify-end px-10 mx-auto z-20 border-2 border-y-darkest-dark'>
+			<div className='flex flex-row items-center text-darkest-dark cursor-pointer p-2'>
+				<button className='font-roboto font-black text-darkest-dark md:inline-flex text-xl mr-2 border-b-[3px] border-b-darkest-dark border-solid '>rosatoelina@gmail.com</button>
 			</div>
 		</motion.div>
   )

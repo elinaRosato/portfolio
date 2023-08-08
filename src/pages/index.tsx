@@ -5,17 +5,18 @@ import {AiFillTwitterCircle, AiFillLinkedin, AiFillYoutube} from 'react-icons/ai
 import Header from '../components/Header'
 import { useEffect, useState } from 'react'
 
-import { Roboto, Open_Sans, Homemade_Apple, Nanum_Pen_Script, Crafty_Girls } from 'next/font/google'
+import { Roboto, Open_Sans, Homemade_Apple, Nanum_Pen_Script, Crafty_Girls, Poppins } from 'next/font/google'
 import Header2 from '../components/Header2'
 import Body from '../components/Body'
 
 const roboto = Roboto({
-  weight: "700",
+  weight: ['400', '500', '700', '900'],
   subsets: ['latin'],
   variable: '--font-roboto'
 })
 
-const sans = Open_Sans({
+const sans = Poppins({
+  weight: ['400', '500', '600', '700', '800', '900'],
   subsets: ['latin'],
   variable: '--font-sans'
 })

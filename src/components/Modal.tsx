@@ -33,14 +33,14 @@ const Modal = ({modal, projects}: Props) => {
   }, [])
 
   const scaleAnimation = {
-        initial: {scale: 0, },
+        initial: {scale: 0, x:"40vw" },
         enter: {scale: 1, x: mousePosition.x-192, y:mousePosition.y-104, transition: {type:'tween', duration: 1, ease: 'backOut'}},
-        closed: {scale: 0, transition: { duration: 0.4, ease: [0.32, 0, 0.67, 0]}}
+        closed: {scale: 0, x:"40vw", transition: { duration: 0.4, ease: [0.32, 0, 0.67, 0]}}
     }
 
   return (
     <>
-      <motion.div variants={scaleAnimation} initial='initial' animate={active ? "enter" : "closed"} className=' absolute top-0 left-0 w-96 h-52 overflow-hidden flex flex-col pointer-events-none '>
+      <motion.div variants={scaleAnimation} initial='initial' animate={active ? "enter" : "closed"} className='hidden lg:absolute top-0 left-0 w-96 h-52 overflow-hidden lg:flex lg:flex-col pointer-events-none '>
         <div style={{top: index * -100 + "%"}} className={` absolute w-full h-full transition-all duration-300 ease-in-out`}>
             {projects.map((project, index) => (
                 <div key={index} className='relative h-full w-full'>

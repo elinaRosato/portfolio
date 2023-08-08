@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import Heading from './Heading'
 import ProjectListItem from './ProjectListItem'
-import poppingbubblesImage from '../images/listapp.png'
 import Modal from './Modal'
 
 interface Project {
@@ -17,27 +16,27 @@ const Projects = (props: Props) => {
     {
       title: 'Popping Bubbles',
       subtitle: 'Computer game',
-      src: '/listapp.png'
+      src: '/poppingbubbles.png'
     },
     {
       title: 'List Web App',
       subtitle: 'JavaScript Web App',
-      src: '/test1.png'
+      src: '/todolist.png'
     },
     {
       title: 'Baccello Landing Page',
       subtitle: 'Wordpress site',
-      src: '/test2.png'
+      src: '/baccello.png'
     },
     {
       title: 'Porridge ecommerce',
       subtitle: 'React ecommerce',
-      src: '/test3.png'
+      src: '/test4.png'
     },
     {
       title: 'Intención Elementos',
       subtitle: 'Html & css',
-      src: '/listapp.png'
+      src: '/intencionelementos.png'
     },
   ]
 
@@ -45,7 +44,7 @@ const Projects = (props: Props) => {
 
   return (
     
-    <section id='portfolio' className='relative snap-start font-roboto min-h-[95vh] pt-20 flex flex-col text-left px-24 items-center justify-evenly mx-auto' >
+    <section id='portfolio' className='relative snap-start font-roboto min-h-[95vh] pt-20 flex flex-col text-left px-10 lg:px-24 items-center justify-evenly mx-auto' >
         <Heading text="portfolio" />
         <ul className='w-full'>
           {projects.map((project, index) => {
