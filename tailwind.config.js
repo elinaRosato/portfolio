@@ -55,6 +55,9 @@ module.exports = {
           letterSpacing: '0',
           fontWeight: '500',
         }],
+      },
+      backgroundImage: {
+        'wavy-button': "url('https://assets.website-files.com/5d3c62cfb1eba4a73c190467/5d3c658c3dfa6674603df71b_wavy-btn-hover-border.svg')",
       }
     },
   },

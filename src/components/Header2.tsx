@@ -2,11 +2,18 @@ import React, { useState } from 'react'
 import { SocialIcon } from 'react-social-icons'
 import { motion } from "framer-motion"
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 
 type Props = {}
 
 function Header2({}: Props) {
+	const router = useRouter()
+
+  const goToAboutPage = () => {
+    router.push('/about'); // Navigates to the '/about' page
+  }
+
 	const [isHovered, setIsHovered] = useState(false);
 
 	const handleHover = () => {

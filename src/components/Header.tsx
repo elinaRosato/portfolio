@@ -10,6 +10,28 @@ type Props = {}
 function Header({}: Props) {
 const [isActive, setIsActive] = useState(false)
 
+const handleDownload = () => {
+    // Path to your PDF file in the public folder
+    const pdfPath = '/ElinaRosato_cv.pdf'
+
+    // Fetch the PDF file and create a Blob
+    fetch(pdfPath)
+      .then((response) => response.blob())
+      .then((blob) => {
+        // Create a URL for the Blob
+        const url = URL.createObjectURL(blob);
+
+        // Create a temporary anchor element
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'ElinaRosato_cv.pdf'; // Set the desired file name
+        link.click();
+
+        // Clean up by revoking the URL
+        URL.revokeObjectURL(url);
+      });
+  };
+
 	return (
 		<motion.header initial={{y: -100, opacity: 0}} animate={{y: 0, opacity: 1}} transition={{duration: 1.5}}>
 			<div className='hidden lg:flex fixed w-full bg-almost-white top-0 items-center justify-between px-10 mx-auto z-20 border-2 border-y-darkest-dark'>
@@ -22,7 +44,7 @@ const [isActive, setIsActive] = useState(false)
 					</ul>
 				</ nav>
 				<div className='flex flex-row items-center text-darkest-dark cursor-pointer'>
-					<button className='flex flex-row items-center gap-2 font-roboto font-black text-darkest-dark md:inline-flex text-xl py-1 border-b-[3px] border-b-darkest-dark border-solid  '>
+					<button onClick={handleDownload} className='flex flex-row items-center gap-2 font-roboto font-black text-darkest-dark md:inline-flex text-xl py-1 border-b-[3px] border-b-darkest-dark border-solid  '>
 						download cv
 						<svg className='w-5 h-5' xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#202124"  viewBox="0 0 16 16">
 							<path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z" fill="#202124"></path>
