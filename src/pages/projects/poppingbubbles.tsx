@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import Link from 'next/link'
 import AnimatedTitle from '../../components/AnimatedTitle'
 import Header from '../../components/Header'
-import Header2 from '../../components/Header2'
+import Header2 from '../../components/EmailButton'
 
 import { Roboto, Open_Sans, Homemade_Apple, Nanum_Pen_Script, Crafty_Girls, Poppins, Content } from 'next/font/google'
 import Image from 'next/image'

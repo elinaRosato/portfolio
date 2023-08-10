@@ -35,12 +35,12 @@ const handleDownload = () => {
 	return (
 		<motion.header initial={{y: -100, opacity: 0}} animate={{y: 0, opacity: 1}} transition={{duration: 1.5}}>
 			<div className='hidden lg:flex fixed w-full bg-almost-white top-0 items-center justify-between px-10 mx-auto z-20 border-2 border-y-darkest-dark'>
-				<h1 className='nav-button visible font-sans font-black text-2xl'>Elina Rosato</h1>
+				<Link href="/"><h1 className='nav-button visible font-sans font-black text-2xl'>Elina Rosato</h1></Link>
 				<nav>
 					<ul className='flex flex-row items-center font-sans font-normal'>
-						<Link href="#about" scroll={false}><button className='nav-button mr-7 ' >my story</button></Link>
-						<Link href="#portfolio" scroll={false}><button className='nav-button mr-7 ' >portfolio</button></Link>
-						<Link href="#skills" scroll={false}><button className='nav-button mr-7' >stack</button></Link>
+						<Link href="/#about" scroll={false}><button className='nav-button mr-7 ' >my story</button></Link>
+						<Link href="/#portfolio" scroll={false}><button className='nav-button mr-7 ' >portfolio</button></Link>
+						<Link href="/#skills" scroll={false}><button className='nav-button mr-7' >stack</button></Link>
 					</ul>
 				</ nav>
 				<div className='flex flex-row items-center text-darkest-dark cursor-pointer'>

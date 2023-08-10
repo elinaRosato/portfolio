@@ -1,5 +1,7 @@
 import React from 'react'
 import Heading from './Heading'
+import Year2016 from './Year2016'
+import Year2018 from './Year2018'
 
 type Props = {}
 
@@ -14,30 +16,9 @@ const About = (props: Props) => {
     <section id='about' className='font-roboto px-[4vw] py-48' >
       <div className=' snap-start min-h-[95vh] flex flex-col text-left max-w-7xl pt-32 items-center justify-evenly mx-auto' >
         <Heading text="My story" />
-        <div className=' flex flex-col gap-20  px-[8vw]'>
-          <div className={` ${aboutContainer}`}>
-            <p className={aboutYear}>2016</p>
-            <p className={aboutText}>
-              I started my 
-              <span className={aboutSpan}> Mechanical Engeneering </span> 
-              degree with absolutely no clue where life would take me. Algorithms, data structures, 
-              <span className={aboutSpan}> Python </span>
-              and 
-              <span className={aboutSpan}> Haskell </span> 
-              became my jam 🤘 
-            </p>
-          </div>
-          <div className={` ${aboutContainer} snap-center`}>
-            <p className={aboutText}> 
-              The economy in  
-              <span className={aboutSpan}> Argentina </span> 
-              was a real rollercoaster, so I decided to chase better opportunities 🌍 I packed my bags and embarked on a life-changing journey. 
-              <span className={aboutSpan}> Denmark </span>
-              and 
-              <span className={aboutSpan}> Sweden </span> 
-              became my homes, and Ive explored 20+ amazing countries along the way.</p>
-              <p className={aboutYear}>2018</p>
-          </div>
+        <div className=' flex flex-col gap-20  px-[3vw]'>
+          <Year2016 />
+          <Year2018 />
           <div className={` ${aboutContainer} snap-center`}>
             <p className={aboutYear}>2020</p>
             <p className={aboutText}> 

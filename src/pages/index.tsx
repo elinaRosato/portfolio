@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { useEffect, useState } from 'react'
 
 import Header from '../components/Header'
-import Header2 from '../components/Header2'
+import EmailButton from '../components/EmailButton'
 import Body from '../components/Body'
 
 import { Roboto, Open_Sans, Homemade_Apple, Nanum_Pen_Script, Crafty_Girls, Poppins } from 'next/font/google'
@@ -52,7 +52,7 @@ const Home: NextPage = () => {
 
       <div className={`${sans.variable} ${roboto.variable} ${handwritten.variable} h-screen snap-y snap-mandatory overflow-scroll bg-almost-white`}>
         <Header />
-        <Header2 />
+        <EmailButton />
         <Body />
       </div>
 
