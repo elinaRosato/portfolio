@@ -2,10 +2,11 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 type Props = {
-  text: string
+  text: string,
+  className: string
 }
 
-const AnimatedTitle = ({ text }: Props) => {
+const AnimatedTitle = ({ text, className }: Props) => {
 
   const letters = text.split('')
 
@@ -31,7 +32,7 @@ const AnimatedTitle = ({ text }: Props) => {
     }
 
   return (
-    <motion.div variants={titleContainer} initial='hidden' animate='show' className={text=="frontend" ? 'text-banner-mobile lg:text-banner-desktop text-transparent font-sans font-black xl:font-black text-stroke overflow-hidden flex ' : 'overflow-hidden flex text-banner-mobile  lg:text-banner-desktop text-darkest-dark font-roboto z-20'}>
+    <motion.div variants={titleContainer} initial='hidden' animate='show' className={className}>
       {letters.map((letter, i) => 
         <motion.span variants={letterAnimation} key={i}>{letter}</motion.span>
       )}

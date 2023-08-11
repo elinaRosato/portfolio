@@ -7,7 +7,7 @@ type Props = {}
 
 const Year2016 = (props: Props) => {
   return (
-    <div className={`w-full min-h-[70vh] flex justify-between gap-20 items-center`}>
+    <div className={`w-full min-h-[70vh] flex justify-between gap-[7vw] items-center`}>
       <AboutYear year='2016' />
       <p>
         <AboutNormalText text='I started my' />

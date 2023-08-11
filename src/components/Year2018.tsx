@@ -7,7 +7,7 @@ type Props = {}
 
 const Year2018 = (props: Props) => {
   return (
-    <div className={`w-full min-h-[70vh] flex justify-between gap-20 items-center snap-center`}>
+    <div className={`w-full min-h-[70vh] flex justify-between gap-[7vw] items-center snap-center pt-[8vh]`}>
       <p>
         <AboutNormalText text='The economy in ' />
         <AboutAccent text=' Argentina ' />

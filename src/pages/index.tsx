@@ -6,7 +6,7 @@ import Header from '../components/Header'
 import EmailButton from '../components/EmailButton'
 import Body from '../components/Body'
 
-import { Roboto, Open_Sans, Homemade_Apple, Nanum_Pen_Script, Crafty_Girls, Poppins } from 'next/font/google'
+import { Roboto, Homemade_Apple, Nanum_Pen_Script, Crafty_Girls, Poppins } from 'next/font/google'
 
 
 const roboto = Roboto({

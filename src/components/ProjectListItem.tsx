@@ -12,18 +12,13 @@ type Props = {
 }
 
 const ProjectListItem = ({index, title, subtitle, src, setModal}: Props) => {
-  const router = useRouter()
-
-  const goToAboutPage = () => {
-    router.push('/about'); // Navigates to the '/about' page
-  }
   return (
-    <Link href="/projects/poppingbubbles" onMouseEnter={() => {setModal({active: true, index:index})}} onMouseLeave={() => {setModal({active: false, index:index})}} className={`flex flex-col gap-2 justify-between font-sans  w-full py-5 lg:px-5 hover:px-0 border-t border-slate-600 border-solid ${index==0 ? 'border-none' : ''} hover:cursor-pointer   transition-all duration-200 `}>
-      <div className='flex flex-col gap-10 lg:flex-row justify-start'>
-        <p className='text-xl lg:text-4xl font-sans font-medium text-accent'>0{index+1}</p>
-        <div className='flex gap-10 lg:text-4xl text-darkest-dark '>
-          <h3 className='font-roboto font-medium text-xl lg:text-4xl text-darkest-dark '>{title} </h3>
-          <p className='font-roboto font-medium text-xl lg:text-4xl text-accent'>{subtitle}</p>
+    <Link href="/projects/poppingbubbles" onMouseEnter={() => {setModal({active: true, index:index})}} onMouseLeave={() => {setModal({active: false, index:index})}} className={`flex flex-col gap-[0.5vw] justify-between w-full py-[1vw] lg:px-[1.5vw] hover:px-0 border-t border-slate-600 border-solid ${index==0 ? 'border-none' : ''} hover:cursor-pointer transition-all duration-200 `}>
+      <div className='flex flex-col gap-[2.3vw] lg:flex-row justify-start lg:items-center'>
+        <p className='text-[1vw] lg:text-[2.3vw] font-sans font-semibold text-accent'>0{index+1}</p>
+        <div className='flex gap-[2.5vw]'>
+          <h3 className='font-roboto font-medium text-xl lg:text-[2vw] text-darkest-dark '>{title} </h3>
+          <p className='font-roboto font-medium text-xl lg:text-[2vw] text-accent'>{subtitle}</p>
         </div>
         
       </div>

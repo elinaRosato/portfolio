@@ -9,6 +9,9 @@
   .text-stroke-2 {
     -webkit-text-stroke: 1.5px #202124
   }
+  .text-stroke-accent {
+    -webkit-text-stroke: 1.5px #3682fd
+  }
 
   .nav-button {
     @apply font-sans font-semibold text-darkest-dark hidden md:inline-flex text-xl px-5 py-3

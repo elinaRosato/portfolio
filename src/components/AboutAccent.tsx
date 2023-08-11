@@ -6,7 +6,7 @@ type Props = {
 
 const AboutAccent = ({text}: Props) => {
   return (
-    <span className='text-[2.3vw] font-sans text-stroke text-transparent font-bold'>{text}</span>
+    <span className='text-[2.3vw] leading-[3.7vw] font-sans font-bold text-stroke text-transparent'>{text}</span>
   )
 }
 

@@ -3,12 +3,15 @@ import { useRouter } from 'next/router'
 import Link from 'next/link'
 import AnimatedTitle from '../../components/AnimatedTitle'
 import Header from '../../components/Header'
-import Header2 from '../../components/EmailButton'
+import EmailButton from '../../components/EmailButton'
 
 import { Roboto, Open_Sans, Homemade_Apple, Nanum_Pen_Script, Crafty_Girls, Poppins, Content } from 'next/font/google'
 import Image from 'next/image'
 import WavyButton from '../../components/WavyButton'
 import ProjectContent from '../../components/ProjectContent'
+import ProjectDetailTitle from '../../components/ProjectDetailTitle'
+import BackButton from '../../components/BackButton'
+import ProjectSummary from '../../components/ProjectSummary'
 
 
 const roboto = Roboto({
@@ -39,7 +42,7 @@ type Props = {}
 const PoppingBubbles = (props: Props) => {
   
   const forwardArrowSvg = (
-    <svg xmlns="http://www.w3.org/2000/svg" className='w-8 h-8' width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+    <svg xmlns="http://www.w3.org/2000/svg" className='w-[6vw] h-[6vw] lg:w-[2vw] lg:h-[2vw]' width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
       <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
     </svg>
   )
@@ -90,34 +93,27 @@ const PoppingBubbles = (props: Props) => {
       testament to the dedication to learning and the fusion of innovation and exploration.`]
     },
   ]
+  const projectTitle: string[] = ['Popping', 'Bubbles']
 
   return (
-    <div className={`${sans.variable} ${roboto.variable} ${handwritten.variable} min-h-screen overflow-scroll bg-almost-white flex flex-col gap-10`}>
+    <div className={`${sans.variable} ${roboto.variable} ${handwritten.variable} min-h-screen overflow-scroll bg-almost-white flex flex-col`}>
       <Header />
-      <Header2 />
-      <main className='lg:mx-6 lg:border-2 lg:border-x-darkest-dark p-[10vh]'>
-        <Link href="/#portfolio">
-          <button className='flex flex-row items-center gap-2 font-roboto font-black text-darkest-dark md:inline-flex text-xl py-1 border-b-[3px] border-b-darkest-dark border-solid'>Back to projects</button>
-        </Link>
-        <div className='flex py-16'>
-          <AnimatedTitle text='Popping' />
-          <AnimatedTitle text='Bubbles' />
-        </div>
-        <div className='  flex flex-col gap-10 px-10'>
-          <div className='flex justify-between items-center'>
-            <p className='w-[30vw] font-sans font-medium text-darkest-dark text-[1.7vw] leading-[2.7vw]'>
-              A computer game built entirely with Vanilla JavaScript.
-            </p>
-            <div className='flex gap-20 justify-end'>
+      <EmailButton />
+      <main className='flex flex-col gap-[1vh] lg:gap-[1vh] lg:mx-[1.5vw] lg:border-2 lg:border-x-darkest-dark py-[10vh] px-[10vw] lg:p-[10vw] '>
+        <BackButton href="/#portfolio" />
+        <ProjectDetailTitle title={projectTitle} />
+        <div className='flex flex-col gap-10 lg:px-10'>
+          <div className='flex flex-col gap-[4vh] lg:gap-0 lg:flex-row justify-between items start lg:items-center'>
+            <ProjectSummary text='A computer game built entirely with Vanilla JavaScript.' />
+            <div className='flex gap-[10vw] lg:gap-[4vw] justify-end'>
               <WavyButton href="https://github.com/elinaRosato/bubblepoppinggame-vanillajs" external={true} text="Read Code" svg={forwardArrowSvg} />
               <WavyButton href="https://elinarosato.github.io/bubblepoppinggame-vanillajs/" external={true} text="Play game !" svg={forwardArrowSvg} />
             </div>
-            
           </div>
-            <video autoPlay loop playsInline muted className=' object-cover rounded-2xl w-[80%] self-center py-10'>
-              <source src="/poppingbubbles.mp4" type='video/webm; codecs=vp9'/>
-            </video>
-            <ProjectContent paragraphs={paragraphs}/>
+          <video autoPlay loop playsInline muted className='object-cover rounded-[1.25vw] w-[100%] self-center'>
+            <source src="/poppingbubbles.mp4" type='video/webm; codecs=vp9'/>
+          </video>
+          <ProjectContent paragraphs={paragraphs}/>
           <div  className='flex justify-end py-[5vh]'>
             <WavyButton href='/projects/poppingbubbles' external={false} text='Next Project: List App' svg={forwardArrowSvg} />
           </div>
