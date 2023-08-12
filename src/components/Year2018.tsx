@@ -7,7 +7,8 @@ type Props = {}
 
 const Year2018 = (props: Props) => {
   return (
-    <div className={`w-full min-h-[70vh] flex justify-between gap-[7vw] items-center snap-center pt-[8vh]`}>
+    <div className={`  min-h-[90vh] flex flex-col p-[3vw] lg:p-0 lg:flex-row-reverse justify-center lg:justify-between gap-[7vw] items-center snap-center pt-[8vh]`}>
+      <AboutYear year='2018' />
       <p>
         <AboutNormalText text='The economy in ' />
         <AboutAccent text=' Argentina ' />
@@ -17,7 +18,6 @@ const Year2018 = (props: Props) => {
         <AboutAccent text=' Sweden ' />
         <AboutNormalText text='became my homes, and Ive explored 20+ amazing countries along the way.' />
       </p>
-      <AboutYear year='2018' />
     </div>
   )
 }

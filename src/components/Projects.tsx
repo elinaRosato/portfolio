@@ -44,7 +44,7 @@ const Projects = (props: Props) => {
 
   return (
     
-    <section id='portfolio' className='snap-start relative flex flex-col gap-[3vw] min-h-[95vh] py-[5vw] lg:py-[10vw] px-[2vw] lg:px-[7vw] mx-auto text-left items-center justify-evenly ' >
+    <section id='portfolio' className='snap-start relative flex flex-col gap-[3vw] min-h-[95vh] py-[18vw] lg:py-[10vw] lg:px-[7vw] mx-auto text-left items-center justify-evenly ' >
         <Heading text="portfolio" />
         <ul className='w-full'>
           {projects.map((project, index) => {
