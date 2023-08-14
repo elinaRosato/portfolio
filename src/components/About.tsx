@@ -8,10 +8,10 @@ type Props = {}
 
 const About = (props: Props) => {
   return (
-    <section id='about' className='font-roboto lg:px-[7vw] py-[10vw] ' >
-      <div className='snap-start min-h-[95vh] flex flex-col text-left py-[17vw] lg:pt-[8vw] lg:items-center justify-evenly mx-auto' >
+    <section id='about' className='font-roboto lg:px-[7vw] py-[10vw] lg:py-[0vw] ' >
+      <div className='snap-start min-h-[95vh] flex flex-col text-left py-[17vw] lg:py-[8vw] lg:items-center justify-evenly mx-auto' >
         <Heading text="my story" />
-        <div className=' flex flex-col gap-[6vw] px-[10vw]'>
+        <div className=' flex flex-col gap-[6vw] px-[5vw]'>
           <Year2016 />
           <Year2018 />
           <Year2020 />

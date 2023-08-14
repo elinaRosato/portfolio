@@ -76,13 +76,13 @@ const Nav = ({setIsActive, isActive}: Props) => {
     <motion.div onMouseLeave={() => {setSelectedIndicator(pathname)}} variants={linkContainer} initial="initial" animate="animate" exit="exit" className='flex flex-col justify-between items-start gap-8 pt-16'>
       <motion.p variants={linkVariants} initial="initial" animate="animate" exit="exit" className="text-xl text-almost-white font-sans border-b-almost-white border-b-2 w-full">Menu</motion.p>
       <motion.div variants={linkVariants} onClick={() => {setIsActive(false)}}>
-        <Link href="#about"  onMouseEnter={() => {setSelectedIndicator("#about")}}><button className={`text-4xl text-almost-white font-roboto w-full ${selectedIndicator === "#about" ? 'text-accent' : ''}`} >My story</button></Link>
+        <Link href="/#about"  onMouseEnter={() => {setSelectedIndicator("#about")}}><button className={`text-4xl text-almost-white font-roboto w-full ${selectedIndicator === "#about" ? 'text-accent' : ''}`} >My story</button></Link>
       </motion.div>
       <motion.div variants={linkVariants} onClick={() => {setIsActive(false)}}>
-        <Link href="#portfolio"  onMouseEnter={() => {setSelectedIndicator("#portfolio")}}><button className={`text-4xl text-almost-white font-roboto w-full ${selectedIndicator === "#portfolio" ? 'text-accent' : ''}`} >Portfolio</button></Link>
+        <Link href="/#portfolio"  onMouseEnter={() => {setSelectedIndicator("#portfolio")}}><button className={`text-4xl text-almost-white font-roboto w-full ${selectedIndicator === "#portfolio" ? 'text-accent' : ''}`} >Portfolio</button></Link>
       </motion.div>
       <motion.div variants={linkVariants} onClick={() => {setIsActive(false)}}>
-        <Link  href="#skills"><button className='text-4xl text-almost-white font-roboto w-full' >Skills</button></Link>
+        <Link  href="/#skills"><button className='text-4xl text-almost-white font-roboto w-full' >Skills</button></Link>
       </motion.div>
     </motion.div>
     <Curve />

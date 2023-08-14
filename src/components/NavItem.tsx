@@ -9,7 +9,7 @@ type Props = {
 const NavItem = ({link, text}: Props) => {
   return (
     <Link href={link} scroll={false}>
-      <button className='hidden md:inline-flex font-semibold  hover:border-b-[3px] hover:border-b-accent hover:border-solid' >
+      <button className='hidden lg:inline-flex font-sans font-semibold text-[1.25vw] hover:border-b-[3px] hover:border-b-accent hover:border-solid' >
         {text}
       </button>
     </Link>

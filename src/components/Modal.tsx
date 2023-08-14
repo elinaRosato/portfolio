@@ -4,15 +4,16 @@ import { motion } from 'framer-motion'
 import { useRef } from 'react';
 
 interface Project {
-  title: string;
-  subtitle: string;
-  src: string;
+  title: string
+  subtitle: string
+  src: string
+  bgColor: string
+  href: string
 }
 
 type Props = {
   modal: { active: boolean, index: number },
   projects: Project[]
-
 }
 
 const Modal = ({modal, projects}: Props) => {
@@ -33,25 +34,33 @@ const Modal = ({modal, projects}: Props) => {
   }, [])
 
   const scaleAnimation = {
-        initial: {scale: 0, x:"40vw" },
-        enter: {scale: 1, x: mousePosition.x-192, y:mousePosition.y-104, transition: {type:'tween', duration: 1, ease: 'backOut'}},
-        closed: {scale: 0, x:"40vw", transition: { duration: 0.4, ease: [0.32, 0, 0.67, 0]}}
+        initial: {scale: 0, x: mousePosition.x-192, y:mousePosition.y-104 },
+        enter: {scale: 1, x: mousePosition.x-192, y:mousePosition.y-104, transition: {type:'tween', duration: 0.4, ease: 'backOut'}},
+        closed: {scale: 0, x: mousePosition.x-192, transition: { duration: 0.4, ease: [0.32, 0, 0.67, 0]}}
+    }
+  const btnAnimation = {
+        initial: {scale: 0, x: mousePosition.x-60, y:mousePosition.y-40 },
+        enter: {scale: 1, x: mousePosition.x-60, y:mousePosition.y-40, transition: {type:'tween', duration: 0.6, ease: 'backOut'}},
+        closed: {scale: 0, x: mousePosition.x-60, transition: { duration: 0.6, ease: [0.32, 0, 0.67, 0]}}
     }
 
   return (
     <>
-      <motion.div variants={scaleAnimation} initial='initial' animate={active ? "enter" : "closed"} className='hidden lg:absolute top-0 left-0 w-96 h-52 overflow-hidden lg:flex lg:flex-col pointer-events-none '>
-        <div style={{top: index * -100 + "%"}} className={` absolute w-full h-full transition-all duration-300 ease-in-out`}>
-            {projects.map((project, index) => (
-                <div key={index} className='relative h-full w-full'>
-                  <Image src={project.src}  height={208} width={384}  objectFit='cover' alt={project.title}/>
+      <motion.div variants={scaleAnimation} initial='initial' animate={active ? "enter" : "closed"} className={`hidden lg:flex lg:flex-col lg:absolute top-0 left-0 w-[330px] h-[220px] items-center justify-center overflow-hidden pointer-events-none`}>
+        <div style={{top: index * -100 + "%"}} className={`absolute w-full h-full transition-all duration-500 ease-in-out`}>
+            {projects.map((project, index) => {
+              const {title, src, bgColor} = project
+              return(
+                <div key={index} style={{backgroundColor: bgColor}} className={`relative h-full w-full flex items-center justify-center`} >
+                  <Image src={src} width={300} height={0}  objectFit='cover' alt={title} className=' h-auto'/>
                 </div>
-              )
+              )}
             )}
         </div>
       </motion.div>
-      <motion.div className='absolute top-0 left-0 h-8 w-8 bg-accent rounded-full' variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"}></motion.div>
-      <motion.div className='absolute top-0 left-0' variants={scaleAnimation} initial="initial" animate={active ? "enter" : "closed"}>Open</motion.div>      
+      <motion.div className='absolute top-0 left-0 h-[80px] w-[80px] bg-accent rounded-full pointer-events-none z-2 flex items-center justify-center ' variants={btnAnimation} initial="initial" animate={active ? "enter" : "closed"}>
+        <p className='text-almost-white font-roboto font-normal text-[1vw]'>Open</p>
+      </motion.div>
     </>
   )
 }

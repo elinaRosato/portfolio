@@ -4,9 +4,11 @@ import ProjectListItem from './ProjectListItem'
 import Modal from './Modal'
 
 interface Project {
-  title: string;
-  subtitle: string;
-  src: string;
+  title: string
+  subtitle: string
+  src: string
+  bgColor: string
+  href: string
 }
 
 type Props = {}
@@ -16,27 +18,37 @@ const Projects = (props: Props) => {
     {
       title: 'Popping Bubbles',
       subtitle: 'Computer game',
-      src: '/poppingbubbles.png'
+      src: '/poppingbubbles.png',
+      bgColor: '#202124',
+      href: '/projects/poppingbubbles'
     },
     {
       title: 'List Web App',
       subtitle: 'JavaScript Web App',
-      src: '/todolist.png'
+      src: '/todolist.png',
+      bgColor: '#CF9BF4',
+      href: '/projects/listwebapp'
     },
     {
       title: 'Baccello Landing Page',
       subtitle: 'Wordpress site',
-      src: '/baccello.png'
+      src: '/baccello.png',
+      bgColor: '#D566C1',
+      href: '/projects/poppingbubbles'
     },
     {
       title: 'Porridge ecommerce',
       subtitle: 'React ecommerce',
-      src: '/test4.png'
+      src: '/test4.png',
+      bgColor: '#C6DAE2',
+      href: '/projects/poppingbubbles'
     },
     {
       title: 'Intención Elementos',
       subtitle: 'Html & css',
-      src: '/intencionelementos.png'
+      src: '/intencionelementos.png',
+      bgColor: '#202124',
+      href: '/projects/poppingbubbles'
     },
   ]
 
@@ -49,7 +61,7 @@ const Projects = (props: Props) => {
         <ul className='w-full'>
           {projects.map((project, index) => {
             return(
-              <ProjectListItem key={index} index={index} title={project.title} subtitle={project.subtitle} src={project.src} setModal={setModal} />
+              <ProjectListItem key={index} index={index} project={project} setModal={setModal} />
             )
           })}
         </ul>

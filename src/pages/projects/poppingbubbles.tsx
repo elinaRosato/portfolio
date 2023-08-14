@@ -1,12 +1,8 @@
 import React from 'react'
-import { useRouter } from 'next/router'
-import Link from 'next/link'
-import AnimatedTitle from '../../components/AnimatedTitle'
 import Header from '../../components/Header'
 import EmailButton from '../../components/EmailButton'
 
-import { Roboto, Open_Sans, Homemade_Apple, Nanum_Pen_Script, Crafty_Girls, Poppins, Content } from 'next/font/google'
-import Image from 'next/image'
+import { Roboto, Homemade_Apple, Poppins } from 'next/font/google'
 import WavyButton from '../../components/WavyButton'
 import ProjectContent from '../../components/ProjectContent'
 import ProjectDetailTitle from '../../components/ProjectDetailTitle'
@@ -115,7 +111,7 @@ const PoppingBubbles = (props: Props) => {
           </video>
           <ProjectContent paragraphs={paragraphs}/>
           <div  className='flex justify-end py-[5vh]'>
-            <WavyButton href='/projects/poppingbubbles' external={false} text='Next Project: List App' svg={forwardArrowSvg} />
+            <WavyButton href='/projects/listwebapp' external={false} text='Next Project: List App' svg={forwardArrowSvg} />
           </div>
         </div>
       </main>
