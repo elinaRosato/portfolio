@@ -12,7 +12,7 @@ type Props = {
 
 const ProjectContent = ({paragraphs}: Props) => {
   return (
-    <div>
+    <div className='flex flex-col gap-[5vw] lg:gap-[3vw] py-[2vh]'>
       {paragraphs.map((paragraph, index) => {
         return(
           <ContentParagraph key={index} subtitle={paragraph.subtitle} text={paragraph.text} />

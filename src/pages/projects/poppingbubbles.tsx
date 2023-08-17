@@ -8,6 +8,7 @@ import ProjectContent from '../../components/ProjectContent'
 import ProjectDetailTitle from '../../components/ProjectDetailTitle'
 import BackButton from '../../components/BackButton'
 import ProjectSummary from '../../components/ProjectSummary'
+import ProjectDetail from '../../components/ProjectDetail'
 
 
 const roboto = Roboto({
@@ -28,31 +29,60 @@ const handwritten = Homemade_Apple({
   variable: '--font-handwritten'
 })
 
+
+interface Images {
+  src: string,
+  alt: string,
+  mobile: boolean,
+}
 interface Paragraphs {
   subtitle: string
   text: string[]
+}
+interface Control {
+  project: string,
+  href: string,
+}
+interface Controls {
+  previous: Control,
+  next: Control,
 }
 
 type Props = {}
 
 const PoppingBubbles = (props: Props) => {
-  
-  const forwardArrowSvg = (
-    <svg xmlns="http://www.w3.org/2000/svg" className='w-[6vw] h-[6vw] lg:w-[2vw] lg:h-[2vw]' width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-    </svg>
-  )
-  const backArrowSvg = (
-    <svg xmlns="http://www.w3.org/2000/svg" className='rotate-180 w-[6vw] h-[6vw] lg:w-[2vw] lg:h-[2vw]' width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-    </svg>
-  )
-  const externalArrowSvg = (
-    <svg className='w-[1.3vw] h-[1.3vw]' xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#202124"  viewBox="0 0 16 16">
-      <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z" fill="#202124"></path>
-    </svg>
-  )
 
+  const projectTitle: string[] = ['Popping', 'Bubbles']
+  const projectSummary: string = 'A computer game built entirely with Vanilla JavaScript.'
+  const code: string = 'https://github.com/elinaRosato/bubblepoppinggame-vanillajs'
+  const demo: string = 'https://elinarosato.github.io/bubblepoppinggame-vanillajs/'
+  const images:Images[] = [
+    {
+      src: '/poppingbubbles.png',
+      alt: 'List Web App Mockup Desktop Light',
+      mobile: true,
+    },
+    {
+      src: '/poppingbubbles.png',
+      alt: 'List Web App Mockup Mobile',
+      mobile: true,
+    },
+    {
+      src: '/poppingbubbles.png',
+      alt: 'List Web App Mockup Mobile Light',
+      mobile: false,
+    },
+    {
+      src: '/poppingbubbles.png',
+      alt: 'List Web App Mockup Desktop Dark',
+      mobile: true,
+    },
+    {
+      src: '/poppingbubbles.png',
+      alt: 'List Web App Mockup Mobile Dark',
+      mobile: false,
+    },
+  ]
   const paragraphs: Paragraphs[] = [
     {
       subtitle: "The Background", 
@@ -99,32 +129,23 @@ const PoppingBubbles = (props: Props) => {
       testament to the dedication to learning and the fusion of innovation and exploration.`]
     },
   ]
-  const projectTitle: string[] = ['Popping', 'Bubbles']
+  const video: string = '/poppingbubbles.mp4'
+  const controls: Controls = {
+    previous: {
+      project: '',
+      href: ''
+    },
+    next: {
+      project: 'List Web App',
+      href: '/projects/listwebapp'
+    }
+  }
 
   return (
     <div className={`${sans.variable} ${roboto.variable} ${handwritten.variable} min-h-screen overflow-scroll bg-almost-white flex flex-col`}>
       <Header />
       <EmailButton />
-      <main className='flex flex-col gap-[1vh] lg:gap-[1vh] lg:mx-[1.5vw] lg:border-2 lg:border-x-darkest-dark py-[10vh] px-[10vw] lg:p-[10vw] '>
-        <WavyButton href='/#portfolio' external={false} reverse={true} text='Back to Projects' svg={backArrowSvg} />
-        <ProjectDetailTitle title={projectTitle} />
-        <div className='flex flex-col gap-10 lg:px-10'>
-          <div className='flex flex-col gap-[4vh] lg:gap-0 lg:flex-row justify-between items start lg:items-center'>
-            <ProjectSummary text='A computer game built entirely with Vanilla JavaScript.' />
-            <div className='flex gap-[10vw] lg:gap-[4vw] justify-end'>
-              <WavyButton href="https://github.com/elinaRosato/bubblepoppinggame-vanillajs" external={true} reverse={false} text="Read Code" svg={externalArrowSvg} />
-              <WavyButton href="https://elinarosato.github.io/bubblepoppinggame-vanillajs/" external={true} reverse={false} text="Play game" svg={externalArrowSvg} />
-            </div>
-          </div>
-          <video autoPlay loop playsInline muted className='object-cover rounded-[1.25vw] w-[100%] self-center'>
-            <source src="/poppingbubbles.mp4" type='video/webm; codecs=vp9'/>
-          </video>
-          <ProjectContent paragraphs={paragraphs}/>
-          <div  className='flex justify-end py-[5vh]'>
-            <WavyButton href='/projects/listwebapp' external={false} reverse={false} text='Next Project: List Web App' svg={forwardArrowSvg} />
-          </div>
-        </div>
-      </main>
+      <ProjectDetail projectTitle={projectTitle} projectSummary={projectSummary} code={code} demo={demo} images={images} paragraphs={paragraphs} video={video} controls={controls}/>
     </div>
       
   )
