@@ -73,7 +73,7 @@ const Baccello = (props: Props) => {
       mobile: false,
     },
     {
-      src: '/baccello_mockup_hero',
+      src: '/baccello_mockup_hero.png',
       alt: 'List Web App Mockup Mobile',
       mobile: true,
     },
