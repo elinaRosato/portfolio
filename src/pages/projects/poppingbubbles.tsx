@@ -59,28 +59,33 @@ const PoppingBubbles = (props: Props) => {
   const demo: string = 'https://elinarosato.github.io/bubblepoppinggame-vanillajs/'
   const images:Images[] = [
     {
-      src: '/poppingbubbles.png',
-      alt: 'List Web App Mockup Desktop Light',
+      src: '/poppingbubbles_controls.png',
+      alt: 'Popping Bubbles pause and mute controls',
       mobile: true,
     },
     {
-      src: '/poppingbubbles.png',
-      alt: 'List Web App Mockup Mobile',
-      mobile: true,
-    },
-    {
-      src: '/poppingbubbles.png',
-      alt: 'List Web App Mockup Mobile Light',
+      src: '/poppingbubbles_score.png',
+      alt: 'Popping bubbles score and life bar',
       mobile: false,
     },
     {
-      src: '/poppingbubbles.png',
-      alt: 'List Web App Mockup Desktop Dark',
+      src: '/poppingbubbles_init.png',
+      alt: 'Popping Bubbles init screen',
       mobile: true,
     },
     {
-      src: '/poppingbubbles.png',
-      alt: 'List Web App Mockup Mobile Dark',
+      src: '/poppingbubbles_life.png',
+      alt: 'Popping bubbles life',
+      mobile: false,
+    },
+    {
+      src: '/poppingbubbles_power.png',
+      alt: 'Popping bubbles x-power',
+      mobile: true,
+    },
+    {
+      src: '/poppingbubbles_speed.png',
+      alt: 'Popping bubbles speed power',
       mobile: false,
     },
   ]

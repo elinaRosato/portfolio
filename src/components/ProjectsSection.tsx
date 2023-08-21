@@ -25,14 +25,14 @@ const ProjectsSection = (props: Props) => {
     {
       title: 'Phonebook',
       subtitle: 'Backend with Node.js',
-      src: '/intencionelementos.png',
+      src: '',
       bgColor: '#202124',
       href: '/projects/phonebook'
     },
     {
       title: 'List Web App',
       subtitle: 'JavaScript Web App',
-      src: '/todolist.png',
+      src: '/listwebapp.png',
       bgColor: '#CF9BF4',
       href: '/projects/listwebapp'
     },
@@ -46,7 +46,7 @@ const ProjectsSection = (props: Props) => {
     {
       title: 'Porridge ecommerce',
       subtitle: 'React ecommerce',
-      src: '/test4.png',
+      src: '',
       bgColor: '#C6DAE2',
       href: '/projects/porridge'
     },
