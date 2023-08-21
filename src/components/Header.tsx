@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
-import { SocialIcon } from 'react-social-icons'
 import { AnimatePresence, motion } from "framer-motion"
 import Link from 'next/link'
 import NavMobile from './NavMobile'
-import DownloadBtn from './DownloadBtn'
+import ButtonDownload from './ButtonDownload'
 import Nav from './Nav'
 
 
@@ -17,7 +16,7 @@ const [isActive, setIsActive] = useState(false)
 			<div className='hidden lg:flex fixed w-full bg-almost-white top-0 items-center justify-between px-[3vw] mx-auto z-20 border-2 border-y-darkest-dark text-darkest-dark'>
 				<Link href="/" className='hidden md:inline-flex px-[1vw] py-[0.625vw] font-sans font-extrabold text-[1.25vw]'>Elina Rosato.</Link>
 				<Nav />
-				<DownloadBtn />
+				<ButtonDownload />
 			</div>
 			<div className='fixed right-0 m-5 z-30 flex flex-row w-full items-center justify-end cursor-pointer lg:hidden'>
 				<div onClick={() => setIsActive(!isActive)} className={`relative w-14 h-14 rounded-full bg-accent flex flex-col justify-center items-center ${isActive ? 'gap-0' : ' gap-[6px]'}`}>

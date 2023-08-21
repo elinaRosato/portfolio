@@ -1,13 +1,13 @@
 import React from 'react'
 import Header from '../../components/Header'
-import EmailButton from '../../components/EmailButton'
+import EmailButton from '../../components/ButtonEmail'
 
 import { Roboto, Homemade_Apple, Poppins } from 'next/font/google'
-import WavyButton from '../../components/WavyButton'
-import ProjectContent from '../../components/ProjectContent'
+import WavyButton from '../../components/ButtonWavy'
+import ProjectContent from '../../components/ProjectDetailContent'
 import ProjectDetailTitle from '../../components/ProjectDetailTitle'
-import BackButton from '../../components/BackButton'
-import ProjectSummary from '../../components/ProjectSummary'
+import BackButton from '../../components/ButtonBack'
+import ProjectSummary from '../../components/ProjectDetailSummary'
 import ProjectDetail from '../../components/ProjectDetail'
 
 
@@ -136,8 +136,8 @@ const Baccello = (props: Props) => {
       href: '/projects/listwebapp'
     },
     next: {
-      project: '',
-      href: ''
+      project: 'Porridge',
+      href: '/projects/porridge'
     }
   }
 

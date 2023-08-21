@@ -1,18 +1,8 @@
 import React, {useEffect, useRef} from 'react'
 import Header from '../../components/Header'
-import EmailButton from '../../components/EmailButton'
-
+import EmailButton from '../../components/ButtonEmail'
 import { Roboto, Homemade_Apple, Poppins } from 'next/font/google'
-import WavyButton from '../../components/WavyButton'
-import ProjectContent from '../../components/ProjectContent'
-import ProjectDetailTitle from '../../components/ProjectDetailTitle'
-import BackButton from '../../components/BackButton'
-import ProjectSummary from '../../components/ProjectSummary'
-import Image from 'next/image'
-import ImageSliderOnScroll from '../../components/ImageSliderOnScroll'
 import ProgressBar from '../../components/ProgressBar'
-import { ForwardArrow, BackArrow, ExternalArrow } from '../../components/IconsSvg'
-import ProjectControls from '../../components/ProjectControls'
 import ProjectDetail from '../../components/ProjectDetail'
 
 
@@ -135,8 +125,8 @@ const ListWebApp = (props: Props) => {
   const video = "/listwebapp.mp4"
   const controls: Controls = {
     previous: {
-      project: 'Popping Bubbles',
-      href: '/projects/poppingbubbles'
+      project: 'Phonebook',
+      href: '/projects/phonebook'
     },
     next: {
       project: 'Baccello',

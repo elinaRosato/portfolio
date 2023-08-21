@@ -1,8 +1,8 @@
 import React from 'react'
 import Heading from './Heading'
-import Year2016 from './Year2016'
-import Year2018 from './Year2018'
-import Year2020 from './Year2020'
+import About2016 from './About2016'
+import About2018 from './About2018'
+import About2020 from './About2020'
 
 type Props = {}
 
@@ -12,9 +12,9 @@ const About = (props: Props) => {
       <div className='snap-start min-h-[95vh] flex flex-col text-left py-[17vw] lg:py-[8vw] lg:items-center justify-evenly mx-auto' >
         <Heading text="my story" />
         <div className=' flex flex-col gap-[6vw] px-[5vw]'>
-          <Year2016 />
-          <Year2018 />
-          <Year2020 />
+          <About2016 />
+          <About2018 />
+          <About2020 />
         </div>
       </div>
     </section>

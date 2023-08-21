@@ -1,5 +1,5 @@
 import React from 'react'
-import WavyButton from './WavyButton'
+import WavyButton from './ButtonWavy'
 import { ForwardArrow, BackArrow, ExternalArrow } from './IconsSvg'
 
 interface Control {

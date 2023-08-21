@@ -2,7 +2,7 @@ import React from 'react'
 
 type Props = {}
 
-function DownloadBtn({}: Props) {
+function ButtonDownload({}: Props) {
   const handleDownload = () => {
     // Path to your PDF file in the public folder
     const pdfPath = '/ElinaRosato_cv.pdf'
@@ -35,4 +35,4 @@ function DownloadBtn({}: Props) {
   )
 }
 
-export default DownloadBtn
+export default ButtonDownload

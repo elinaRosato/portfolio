@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { useEffect, useState } from 'react'
 
 import Header from '../components/Header'
-import EmailButton from '../components/EmailButton'
+import EmailButton from '../components/ButtonEmail'
 import Body from '../components/Body'
 
 import { Roboto, Homemade_Apple, Nanum_Pen_Script, Crafty_Girls, Poppins } from 'next/font/google'

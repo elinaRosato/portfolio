@@ -1,6 +1,6 @@
 import React from 'react'
 import AboutYear from './AboutYear'
-import AboutAccent from './AboutAccent'
+import AboutAccent from './AboutAccentText'
 import AboutNormalText from './AboutNormalText'
 
 type Props = {}

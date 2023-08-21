@@ -5,7 +5,7 @@ type Props = {
   text: string[]
 }
 
-const ContentParagraph = ({subtitle, text}: Props) => {
+const ProjectDetailParagraph = ({subtitle, text}: Props) => {
   return (
     <div className='py-[5vw] lg:py-[1.25vw] flex flex-col gap-[5vw] lg:gap-[0.625vw]'>
       <h2 className='font-sans font-bold text-darkest-dark text-[7vw] leading-[9vw] lg:text-[2vw] lg:leading-[5vw]'>{subtitle}</h2>
@@ -19,4 +19,4 @@ const ContentParagraph = ({subtitle, text}: Props) => {
   )
 }
 
-export default ContentParagraph
+export default ProjectDetailParagraph

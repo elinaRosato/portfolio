@@ -1,5 +1,5 @@
 import React from 'react'
-import ContentParagraph from './ContentParagraph';
+import ProjectDetailParagraph from './ProjectDetailParagraph';
 
 interface Paragraphs {
   subtitle: string
@@ -10,16 +10,16 @@ type Props = {
   paragraphs: Paragraphs[]
 }
 
-const ProjectContent = ({paragraphs}: Props) => {
+const ProjectDetailContent = ({paragraphs}: Props) => {
   return (
     <div className='flex flex-col gap-[5vw] lg:gap-[3vw] py-[2vh]'>
       {paragraphs.map((paragraph, index) => {
         return(
-          <ContentParagraph key={index} subtitle={paragraph.subtitle} text={paragraph.text} />
+          <ProjectDetailParagraph key={index} subtitle={paragraph.subtitle} text={paragraph.text} />
         )
       })}
     </div>
   )
 }
 
-export default ProjectContent
+export default ProjectDetailContent

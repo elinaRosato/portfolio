@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import Heading from './Heading'
 import ProjectListItem from './ProjectListItem'
-import Modal from './Modal'
+import ProjectsModal from './ProjectsModal'
 
 interface Project {
   title: string
@@ -13,7 +13,7 @@ interface Project {
 
 type Props = {}
 
-const Projects = (props: Props) => {
+const ProjectsSection = (props: Props) => {
   const projects: Project[] = [
     {
       title: 'Popping Bubbles',
@@ -21,6 +21,13 @@ const Projects = (props: Props) => {
       src: '/poppingbubbles.png',
       bgColor: '#202124',
       href: '/projects/poppingbubbles'
+    },
+    {
+      title: 'Phonebook',
+      subtitle: 'Backend with Node.js',
+      src: '/intencionelementos.png',
+      bgColor: '#202124',
+      href: '/projects/phonebook'
     },
     {
       title: 'List Web App',
@@ -43,13 +50,6 @@ const Projects = (props: Props) => {
       bgColor: '#C6DAE2',
       href: '/projects/poppingbubbles'
     },
-    {
-      title: 'Intención Elementos',
-      subtitle: 'Html & css',
-      src: '/intencionelementos.png',
-      bgColor: '#202124',
-      href: '/projects/poppingbubbles'
-    },
   ]
 
   const [modal, setModal] = useState({active: false, index:0})
@@ -65,7 +65,7 @@ const Projects = (props: Props) => {
             )
           })}
         </ul>
-        <Modal modal={modal} projects={projects} />
+        <ProjectsModal modal={modal} projects={projects} />
     </section>
 
 
@@ -73,4 +73,4 @@ const Projects = (props: Props) => {
   )
 }
 
-export default Projects
+export default ProjectsSection

@@ -1,12 +1,11 @@
 import React from 'react'
-import WavyButton from './WavyButton'
 import ProjectDetailTitle from './ProjectDetailTitle'
-import ProjectSummary from './ProjectSummary'
+import ProjectDetailSummary from './ProjectDetailSummary'
 import ImageSliderOnScroll from './ImageSliderOnScroll'
-import ProjectContent from './ProjectContent'
-import { BackArrow, ExternalArrow } from './IconsSvg'
-import ProjectControls from './ProjectControls'
+import ProjectDetailContent from './ProjectDetailContent'
+import ProjectDetailControls from './ProjectDetailControls'
 import ProjectVideo from './ProjectVideo'
+import ButtonBack from './ButtonBack'
 
 interface Paragraphs {
   subtitle: string
@@ -41,13 +40,13 @@ type Props = {
 const ProjectDetail = ({projectTitle, projectSummary, code, demo, images, paragraphs, video, controls}: Props) => {
   return (
     <main className='overflow-hidden flex flex-col gap-[5vh] lg:gap-[3vw] py-[10vh] px-[10vw] lg:py-[16vh] lg:mx-[1.5vw] lg:border-2 lg:border-x-darkest-dark '>        
-      <WavyButton href='/#portfolio' external={false} reverse={true} text='Back to Projects' svg={BackArrow} />
+      <ButtonBack />
       <ProjectDetailTitle title={projectTitle} />
-      <ProjectSummary text={projectSummary} code={code} demo={demo} />
+      <ProjectDetailSummary text={projectSummary} code={code} demo={demo} />
       <ImageSliderOnScroll images={images} />
-      <ProjectContent paragraphs={paragraphs}/>
+      <ProjectDetailContent paragraphs={paragraphs}/>
       {video ? <ProjectVideo src={video} /> : ''}
-      <ProjectControls controls={controls} />
+      <ProjectDetailControls controls={controls} />
     </main>
   )
 }

@@ -1,7 +1,7 @@
 import React from 'react'
-import Hero from './Hero'
-import About from './About'
-import Projects from './Projects'
+import Hero from './HeroSection'
+import About from './AboutSection'
+import Projects from './ProjectsSection'
 
 type Props = {}
 

@@ -1,14 +1,15 @@
 import React from 'react'
 import Header from '../../components/Header'
-import EmailButton from '../../components/EmailButton'
+import EmailButton from '../../components/ButtonEmail'
 
 import { Roboto, Homemade_Apple, Poppins } from 'next/font/google'
-import WavyButton from '../../components/WavyButton'
-import ProjectContent from '../../components/ProjectContent'
+import WavyButton from '../../components/ButtonWavy'
+import ProjectContent from '../../components/ProjectDetailContent'
 import ProjectDetailTitle from '../../components/ProjectDetailTitle'
-import BackButton from '../../components/BackButton'
-import ProjectSummary from '../../components/ProjectSummary'
+import BackButton from '../../components/ButtonBack'
+import ProjectSummary from '../../components/ProjectDetailSummary'
 import ProjectDetail from '../../components/ProjectDetail'
+import ProgressBar from '../../components/ProgressBar'
 
 
 const roboto = Roboto({
@@ -136,8 +137,8 @@ const PoppingBubbles = (props: Props) => {
       href: ''
     },
     next: {
-      project: 'List Web App',
-      href: '/projects/listwebapp'
+      project: 'Phonebook',
+      href: '/projects/phonebook'
     }
   }
 
@@ -146,6 +147,7 @@ const PoppingBubbles = (props: Props) => {
       <Header />
       <EmailButton />
       <ProjectDetail projectTitle={projectTitle} projectSummary={projectSummary} code={code} demo={demo} images={images} paragraphs={paragraphs} video={video} controls={controls}/>
+      <ProgressBar />
     </div>
       
   )
