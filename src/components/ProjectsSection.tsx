@@ -41,14 +41,14 @@ const ProjectsSection = (props: Props) => {
       subtitle: 'Wordpress site',
       src: '/baccello.png',
       bgColor: '#D566C1',
-      href: '/projects/poppingbubbles'
+      href: '/projects/baccello'
     },
     {
       title: 'Porridge ecommerce',
       subtitle: 'React ecommerce',
       src: '/test4.png',
       bgColor: '#C6DAE2',
-      href: '/projects/poppingbubbles'
+      href: '/projects/porridge'
     },
   ]
 
