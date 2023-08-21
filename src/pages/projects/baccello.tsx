@@ -9,6 +9,7 @@ import ProjectDetailTitle from '../../components/ProjectDetailTitle'
 import BackButton from '../../components/ButtonBack'
 import ProjectSummary from '../../components/ProjectDetailSummary'
 import ProjectDetail from '../../components/ProjectDetail'
+import ProgressBar from '../../components/ProgressBar'
 
 
 const roboto = Roboto({
@@ -146,6 +147,7 @@ const Baccello = (props: Props) => {
       <Header />
       <EmailButton />
       <ProjectDetail projectTitle={projectTitle} projectSummary={projectSummary} code={code} demo={demo} images={images} paragraphs={paragraphs} video={video} controls={controls}/>
+      <ProgressBar />
     </div>
       
   )
