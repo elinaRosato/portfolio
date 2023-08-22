@@ -87,47 +87,32 @@ const Baccello = (props: Props) => {
   const paragraphs: Paragraphs[] = [
     {
       subtitle: "The Background", 
-      text: [`Popping Bubbles is a personal project born from a deep-rooted desire to both challenge and fortify my skills 
-      in plain JavaScript. The overarching goal was to embark on an expedition that would push me to explore 
-      uncharted territories in game development, a field I had yet to explore. By venturing into the world of 
-      game design, I aimed to stimulate my creativity in new dimensions and forge a deep connection between logic 
-      and imagination.`]
+      text: [`Baccello.io came into being as a result of minds coming together. Guided by the CEO's vision and 
+      complemented by the web designer's artistry, I joined the mix to infuse my development expertise. The goal? 
+      Weaving a landing page that captured the essence of blockchain technology while celebrating the beauty of art.`]
     },
     {
       subtitle: "The Stack", 
-      text: [`The project is built upon the seamless integration of Vanilla JavaScript and HTML Canvas. 
-      This dynamic duo empowers Popping Bubbles with its interactive prowess and visual allure. 
-      The intricate interplay between the code and canvas not only results in an engaging user experience 
-      but also opens doors to boundless creativity.`]
+      text: [`WordPress ensured easy maintainability and editing for the client. Astra Theme, 
+      a bunch of usefull plugins and some CSS magic added unique elements that brought our page to life.
+      `, `Now, let's talk teamwork. The project wasn't just lines of code; it was a all about collaboration. 
+      We relied on each other's strengths, each member lending their expertise to the collective vision.
+      `]
     },
     {
       subtitle: "The Challenge", 
-      text: [`The journey of crafting Popping Bubbles was characterized by a unique blend of play and programming. 
-      Each milestone achieved and every new feature introduced felt akin to leveling up within my own game. 
-      It was a profound realization of how engaging and rewarding the process of development can be, 
-      akin to playing a game in itself.`,
-      `Among the challenges encountered was the mastery of HTML Canvas, a tool that was entirely unfamiliar to me. 
-      Through meticulous exploration, consultation of resources such as YouTube tutorials and official 
-      documentation, I uncovered the potential of this tool and harnessed it to bring my vision to life. 
-      The creative process of constructing the game interface, from animated sprites to intuitive interactivity, 
-      proved to be an intricate puzzle that I relished solving.`]
-    },
-    {
-      subtitle: "The Features", 
-      text: [
-        `Within Popping Bubbles, a symphony of features come together to enrich the gameplay experience:`,
-        `👾 Animated Splendor: Characters and bubbles that dance and animate across the canvas, enhancing immersion.`,
-        `👾 Audio Enhancement: Dynamic sound effects that add an auditory dimension to the interactive journey.`,
-        `👾 User Controls: Play, pause, and mute functionalities that provide players with control over their experience.`,
-        `👾 Visual Delight: A layered background with parallax effect, lending depth to the visual narrative.`,
-        `👾 Power of Superpowers: Unique abilities including speed, magnetism, and x-power, adding layers of strategy.`,
-      ]
+      text: [`Our journey with Baccello.io taught me the power of embracing challenges as oportunities for innovation. 
+      Let's be real, it's not all smooth sailing in the land of plugins and themes. As the design dreams collided with 
+      WordPress's limitations, I dived into a world of creative coding, crafting custom solutions to bring unique 
+      functionalities to life`]
     },
     {
       subtitle: "", 
-      text: [`Popping Bubbles is a testament to the unexpected potency of unadorned JavaScript and the ability of a 
-      solo creator to orchestrate a symphony of code and creativity. The journey from code to game is a 
-      testament to the dedication to learning and the fusion of innovation and exploration.`]
+      text: [`While Baccello's landing page is no longer live due to the company's discontinuation, 
+      the echoes of the journey remain. The project underlined the importance of finding innovative solutions 
+      within a team context. From challenges, creativity and collaboration emerged a web page that briefly 
+      encapsulated the essence of NFTs, even if just for a virtual moment.
+      `]
     },
   ]
   const video: string = '/baccello.mp4'

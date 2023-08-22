@@ -47,19 +47,81 @@ type Props = {}
 const Phonebook = (props: Props) => {
   
   const projectTitle: string[] = ['Phonebook']
-  const projectSummary: string = ' A backend project built with Node.js and React.'
+  const projectSummary: string = ' A fullstack project focused on the backend, built with Node.js, express.js, React and Bootstrap.'
   const code: string = 'https://github.com/elinaRosato/fullstackopen-part3'
   const demo: string = 'https://persons-service.onrender.com/'
   const images:Images[] = [
+    {
+      src: '/phonebook_validation_alert.png',
+      alt: 'List Web App Mockup Mobile',
+      mobile: true,
+    },
+    {
+      src: '/phonebook_mockup_desktop.png',
+      alt: 'List Web App Mockup Desktop Dark',
+      mobile: true,
+    },
+    {
+      src: '/phonebook_mockup_mobile.png',
+      alt: 'List Web App Mockup Mobile Dark',
+      mobile: false,
+    },
+    {
+      src: '/phonebook_search.png',
+      alt: 'List Web App Mockup Mobile Light',
+      mobile: false,
+    },
+    {
+      src: '/phonebook_success_alert.png',
+      alt: 'List Web App Mockup Desktop Dark',
+      mobile: true,
+    },
+    {
+      src: '/phonebook_duplicated_alert.png',
+      alt: 'List Web App Mockup Mobile Dark',
+      mobile: false,
+    },
+    
   ]
   const paragraphs: Paragraphs[] = [
     {
-      subtitle: "This page is under construction.", 
-      text: []
+      subtitle: "The Background", 
+      text: [`Phonebook was born from my passion to unravel the complexities of backend development. 
+      With an aim to solidify my skills, I joined the Full Stack Open course from the University of Helsinki 
+      and started exploring the server-side of the stack. This project isn't just an app, it's a big step in 
+      my journey towards building robust and dynamic applications.`]
     },
     {
-      subtitle: "Project description and demo comming soon", 
-      text: []
+      subtitle: "The Stack", 
+      text: [`Phonebook leverages the power of NodeJS to build a robust backend architecture. Express.js acts as a 
+      gateway, facilitating smooth communication between the frontend and the server. The database dance is led by 
+      MongoDB, ensuring seamless data storage and retrieval. Axios takes center stage for client-server communication,
+       while Jest ensures that the application performs its moves flawlessly. Bootstrap 5 lends style and elegance 
+       to the frontend, sculpted with React.`]
+    },
+    {
+      subtitle: "The Challenge", 
+      text: [`As I delved into the backend technologies, a new set of challenges came to light. Creating a seamless 
+      flow between the frontend and backend was a puzzle to solve. Ensuring that data validation was in place and  
+      handling server responses effectively demanded a new level of attention to detail.`]
+    },
+    {
+      subtitle: "Features", 
+      text: [
+        `Phonebook orchestrates an array of features, each designed to create a seamless user experience:`,
+        `👾 Contact storage and dynamic updates.`,
+        `👾 Creation and deletion of contacts like a breeze.`,
+        `👾 Data validation to guarantee adherence to specified formats. `,
+        `👾 A live search bar that instantaneously filters the contact list when the user types.`,
+      ]
+    },
+    {
+      subtitle: "", 
+      text: [`Through this project, I've ventured deeper into backend development, mastering the art of data 
+      management, server communication, and application validation. Phonebook stands as a pivotal point in 
+      my development journey. It's where theory turned into practice, and the lessons I've learned will stay 
+      with me as I continue to grow.
+      `]
     },
   ]
   const video = ""

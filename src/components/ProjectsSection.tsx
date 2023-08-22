@@ -25,8 +25,8 @@ const ProjectsSection = (props: Props) => {
     {
       title: 'Phonebook',
       subtitle: 'Backend with Node.js',
-      src: '',
-      bgColor: '#202124',
+      src: '/phonebook.png',
+      bgColor: '#C6DAE2',
       href: '/projects/phonebook'
     },
     {
@@ -46,8 +46,8 @@ const ProjectsSection = (props: Props) => {
     {
       title: 'Porridge ecommerce',
       subtitle: 'React ecommerce',
-      src: '',
-      bgColor: '#C6DAE2',
+      src: '/porridge.png',
+      bgColor: '#202124',
       href: '/projects/porridge'
     },
   ]
