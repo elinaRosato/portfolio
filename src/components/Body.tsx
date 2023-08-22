@@ -2,6 +2,7 @@ import React from 'react'
 import Hero from './HeroSection'
 import About from './AboutSection'
 import Projects from './ProjectsSection'
+import Footer from './Footer'
 
 type Props = {}
 
@@ -11,9 +12,9 @@ const Body = (props: Props) => {
       <Hero/>
       <About />
       <Projects />
+      <Footer />
       { /* Skills */ }
       { /* Contact */ }
-      { /* Footer */ }
     </main>
   )
 }
