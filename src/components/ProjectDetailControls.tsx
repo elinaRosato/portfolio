@@ -20,7 +20,7 @@ const ProjectControls = ({controls}: Props) => {
   return (
     <div  className='flex justify-between gap-[10vw] py-[5vh]'>
       {previous.project==='' ? <div /> : <WavyButton href={previous.href} external={false} reverse={true} text={`Previous Project: ${previous.project}`} svg={BackArrow} /> }
-      {next.project==='' ? <div /> : <WavyButton href={next.href} external={false} reverse={true} text={`Next Project: ${next.project}`} svg={ForwardArrow} /> }
+      {next.project==='' ? <div /> : <WavyButton href={next.href} external={false} reverse={false} text={`Next Project: ${next.project}`} svg={ForwardArrow} /> }
     </div>
   )
 }

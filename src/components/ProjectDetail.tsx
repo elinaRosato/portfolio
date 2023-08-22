@@ -6,6 +6,7 @@ import ProjectDetailContent from './ProjectDetailContent'
 import ProjectDetailControls from './ProjectDetailControls'
 import ProjectVideo from './ProjectVideo'
 import ButtonBack from './ButtonBack'
+import Image from 'next/image'
 
 interface Paragraphs {
   subtitle: string
@@ -43,7 +44,10 @@ const ProjectDetail = ({projectTitle, projectSummary, code, demo, images, paragr
       <ButtonBack />
       <ProjectDetailTitle title={projectTitle} />
       <ProjectDetailSummary text={projectSummary} code={code} demo={demo} />
-      <ImageSliderOnScroll images={images} />
+      {images.length>1 ? 
+      <ImageSliderOnScroll images={images} /> : 
+      <Image src={images[0].src} width={0} height={0} layout='responsive' objectFit='cover' alt='Elina Rosato'/>
+      }
       <ProjectDetailContent paragraphs={paragraphs}/>
       {video ? <ProjectVideo src={video} /> : ''}
       <ProjectDetailControls controls={controls} />
