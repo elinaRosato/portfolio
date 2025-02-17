@@ -6,7 +6,7 @@ type Props = {
 
 const AboutYear = ({year}: Props) => {
   return (
-    <img src="photo1657295743.jpeg" alt="" />
+    <img className='w-1/3' src="photo1657295743.jpeg" alt="" />
   )
 }
 
