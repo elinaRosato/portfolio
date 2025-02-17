@@ -6,7 +6,7 @@ type Props = {
 
 const AboutYear = ({year}: Props) => {
   return (
-    <h3 className='text-[20vw] lg:text-[12vw] font-sans font-bold text-stroke-2 text-transparent '>{year}</h3>
+    <img src="photo1657295743.jpeg" alt="" />
   )
 }
 
