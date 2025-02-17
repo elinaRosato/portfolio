@@ -21,7 +21,7 @@ const About = (props: Props) => {
               <AboutNormalText text='Oh right, I almost forgot to introduce myself. So, this is me—an extremely curious, creative, and tech-obsessed girl. I dedicate my life to exploring different ways to ' />
               <AboutAccent text=' push the limits of my human experience ' />
               <AboutNormalText text=', and along the way, I’ve discovered 10.76% of the world and too many hobbies I’m genuinely interested in (and had to accept that it’s physically impossible to keep up with them all consistently). But there’s one passion I realized I couldn’t live without: ' />
-              <AboutAccent text=' bringing ideas—mine or yours—to life.' />
+              <AboutAccent text=' bringing ideas—mine or yours—to life. ' />
               <AboutNormalText text='After spending years as a nomad, I decided to ' />
               <AboutAccent text=' teach myself to code  ' />
               <AboutNormalText text='with nothing but' />
