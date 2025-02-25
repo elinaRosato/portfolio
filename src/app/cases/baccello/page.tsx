@@ -93,7 +93,16 @@ const Baccello = (props: Props) => {
 
   return (
     <div className={`min-h-screen overflow-scroll bg-almost-white flex flex-col`}>
-      <ProjectTemplate projectTitle={projectTitle} projectSummary={projectSummary} code={code} demo={demo} images={images} projectContent={projectContent} controls={controls}/>
+      <ProjectTemplate 
+        projectTitle={projectTitle} 
+        projectSummary={projectSummary} 
+        code={code} 
+        demo={demo} 
+        images={images} 
+        projectContent={projectContent} 
+        controls={controls}
+        href='/#cases' 
+      />
       <ProgressBar />
     </div>
       

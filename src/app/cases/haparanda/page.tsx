@@ -49,7 +49,7 @@ const Haparanda = (props: Props) => {
   const projectTitle: string[] = ['Haparanda']
   const projectSummary: string = 'A Bold and Disruptive Website for a Game-Changing Brand.'
   const code: string = ''
-  const demo: string = 'https:/www.haparanda.eu'
+  const demo: string = 'https://www.haparanda.eu'
 
   const projectContent: ProjectContent[] = [
     { type: "h2", content: "The Background" },
@@ -127,7 +127,9 @@ const Haparanda = (props: Props) => {
         projectSummary={projectSummary} 
         code={''} demo={demo} 
         images={images} 
-        controls={control} />
+        controls={control} 
+        href='/#cases' 
+      />
       <ProgressBar />
     </div>
       

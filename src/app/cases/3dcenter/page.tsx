@@ -48,7 +48,7 @@ const Case3DCenter = (props: Props) => {
   const projectTitle: string[] = ['3D Center']
   const projectSummary: string = 'A Bold and Disruptive Website for a Game-Changing Brand.'
   const code: string = ''
-  const demo: string = 'https:/www.3dcenter.se'
+  const demo: string = 'https://www.3dcenter.se'
 
   const projectContent: ProjectContent[] = [
     { type: "h2", content: "The Background" },
@@ -122,7 +122,9 @@ const Case3DCenter = (props: Props) => {
         projectSummary={projectSummary} 
         code={''} demo={demo} 
         images={images} 
-        controls={control} />
+        controls={control} 
+        href='/#cases' 
+      />
       <ProgressBar />
     </div>
       

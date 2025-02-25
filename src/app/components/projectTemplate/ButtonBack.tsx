@@ -2,11 +2,13 @@ import React from 'react'
 import ButtonWavy from '../global/ButtonWavy'
 import { BackArrow } from '../global/IconsSvg'
 
-type Props = {}
+type Props = {
+  href: string
+}
 
-const ButtonBack = ({}: Props) => {
+const ButtonBack = ({ href }: Props) => {
   return (
-    <ButtonWavy href='/#portfolio' external={false} reverse={true} text='Back to Projects' svg={BackArrow} />
+    <ButtonWavy href={href} external={false} reverse={true} text='Back to Projects' svg={BackArrow} />
   )
 }
 

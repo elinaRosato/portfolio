@@ -1,7 +1,5 @@
 import React from 'react'
 import ParagraphBig from '../global/ParagraphBig'
-import Heading from '../global/Heading'
-import SectionHeading from '../global/SectionHeading'
 import SectionTitle from '../global/SectionTitle'
 import ParagraphSmall from '../global/ParagraphSmall'
 
@@ -26,16 +24,16 @@ const Footer = (props: Props) => {
           </div>
           <div className='pb-5'>
             <SectionTitle content={"case studies"} />
-            <a className='block my-3' href="/haparanda"><ParagraphSmall content={"Haparanda"}/></a>
-            <a className='block my-3' href="/3dcenter"><ParagraphSmall content={"3DCenter"}/></a>
-            <a className='block my-3' href="/orthoteam"><ParagraphSmall content={"OrthoTeam"}/></a>
-            <a className='block my-3' href="/baccello"><ParagraphSmall content={"Baccello"}/></a>
+            <a className='block my-3' href="/cases/haparanda"><ParagraphSmall content={"Haparanda"}/></a>
+            <a className='block my-3' href="/cases/3dcenter"><ParagraphSmall content={"3DCenter"}/></a>
+            <a className='block my-3' href="/cases/orthoteam"><ParagraphSmall content={"OrthoTeam"}/></a>
+            <a className='block my-3' href="/cases/baccello"><ParagraphSmall content={"Baccello"}/></a>
           </div>
           <div className='pb-5'>
             <SectionTitle content={"personal work"} />
-            <a className='block my-3' href="/poppingbubbles"><ParagraphSmall content={"Popping Bubbles"}/></a>
-            <a className='block my-3' href="/phonebook"><ParagraphSmall content={"Phonebook App"}/></a>
-            <a className='block my-3' href="/todolist"><ParagraphSmall content={"To-Do List App"}/></a>
+            <a className='block my-3' href="/projects/projects/poppingbubbles"><ParagraphSmall content={"Popping Bubbles"}/></a>
+            <a className='block my-3' href="/projects/phonebook"><ParagraphSmall content={"Phonebook App"}/></a>
+            <a className='block my-3' href="/projects/todolist"><ParagraphSmall content={"To-Do List App"}/></a>
           </div>
         </div>
       </div>

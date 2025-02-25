@@ -34,13 +34,14 @@ type Props = {
   demo:string,
   images:Images[],
   projectContent:ProjectContent[],
-  controls:Controls
+  controls:Controls,
+  href:string
 }
 
-const ProjectTemplate = ({projectTitle, projectSummary, code, demo, images, projectContent, controls}: Props) => {
+const ProjectTemplate = ({projectTitle, projectSummary, code, demo, images, projectContent, controls, href}: Props) => {
   return (
     <main className='overflow-hidden flex flex-col gap-[5vh] lg:gap-[3vw] py-[10vh] px-[10vw] lg:py-[16vh] lg:mx-[1.5vw] lg:border-2 lg:border-x-darkest-dark '>        
-      <ButtonBack />
+      <ButtonBack href={href} />
       <ProjectDetailTitle title={projectTitle} />
       <ProjectDetailSummary text={projectSummary} code={code} demo={demo} />
       {images.length>1 ? 
