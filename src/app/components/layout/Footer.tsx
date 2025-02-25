@@ -31,7 +31,7 @@ const Footer = (props: Props) => {
           </div>
           <div className='pb-5'>
             <SectionTitle content={"personal work"} />
-            <a className='block my-3' href="/projects/projects/poppingbubbles"><ParagraphSmall content={"Popping Bubbles"}/></a>
+            <a className='block my-3' href="/projects/poppingbubbles"><ParagraphSmall content={"Popping Bubbles"}/></a>
             <a className='block my-3' href="/projects/phonebook"><ParagraphSmall content={"Phonebook App"}/></a>
             <a className='block my-3' href="/projects/todolist"><ParagraphSmall content={"To-Do List App"}/></a>
           </div>
