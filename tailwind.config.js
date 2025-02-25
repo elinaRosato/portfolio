@@ -13,6 +13,29 @@ module.exports = {
         roboto: ['var(--font-roboto)'],
         handwritten: ['var(--font-handwritten)'],
       },
+      screens: {
+        'portrait': { 'raw': '(orientation: portrait)' },
+        'landscape': { 'raw': '(orientation: landscape)' },
+        // Small screens
+        'sm-portrait': { 'raw': '(min-width: 640px) and (orientation: portrait)' },
+        'sm-landscape': { 'raw': '(min-width: 640px) and (orientation: landscape)' },
+        
+        // Medium screens
+        'md-portrait': { 'raw': '(min-width: 768px) and (orientation: portrait)' },
+        'md-landscape': { 'raw': '(min-width: 768px) and (orientation: landscape)' },
+        
+        // Large screens
+        'lg-portrait': { 'raw': '(min-width: 1024px) and (orientation: portrait)' },
+        'lg-landscape': { 'raw': '(min-width: 1024px) and (orientation: landscape)' },
+        
+        // Extra large screens
+        'xl-portrait': { 'raw': '(min-width: 1280px) and (orientation: portrait)' },
+        'xl-landscape': { 'raw': '(min-width: 1280px) and (orientation: landscape)' },
+
+        // 2x Extra large screens
+        '2xl-portrait': { 'raw': '(min-width: 1536px) and (orientation: portrait)' },
+        '2xl-landscape': { 'raw': '(min-width: 1536px) and (orientation: landscape)' },
+      },
       colors: {
         'darkest-dark': '#202124',
         'accent': '#3682fd',
