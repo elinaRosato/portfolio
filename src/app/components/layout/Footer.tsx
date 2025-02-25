@@ -15,7 +15,7 @@ const Footer = (props: Props) => {
           <p className='text-lg text-slate-400'>status</p>
           <p className='text-lg'><span className='pr-2 text-green-500'>●</span>open to work</p>
         </div>
-        <div className='md-flex justify-between'>
+        <div className='md:flex md:w-3/4 justify-between'>
           <div className='pb-5'>
             <SectionTitle content={"menu"} />
             <a className='block my-3' href="#about"><ParagraphSmall content={"My Story"}/></a>
