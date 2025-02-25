@@ -21,7 +21,7 @@ const About = (props: Props) => {
           {forClients ? (
             <>
               <p className='font-regular py-3 text-darkest-dark text-md lg:text-xl leading-snug'>
-                I'm Elina Rosato, an extremely curious, creative, and tech-obsessed girl. I dedicate my life to 
+                I&rsquo;m Elina Rosato, an extremely curious, creative, and tech-obsessed girl. I dedicate my life to 
                 <strong className='font-black relative hover-trigger inline-block mx-1'>exploring
                   <img src="snowboard.png" alt="exploring" className='absolute top-[-100%] left-0 hidden hover-image min-w-[200px]' />
                 </strong>
@@ -36,7 +36,7 @@ const About = (props: Props) => {
                 <strong className='font-black relative hover-trigger inline-block mx-1'>software engineering
                   <img src="programming.gif" alt="programming" className='absolute top-[-100%] left-0 hidden hover-image min-w-[200px]' />
                 </strong>
-                , backend development, and system architecture. Whether you're a startup looking for a custom-built solution or an established brand in need of technical expertise, I help transform complex ideas into real, functional, and efficient software. 
+                , backend development, and system architecture. Whether you&rsquo;re a startup looking for a custom-built solution or an established brand in need of technical expertise, I help transform complex ideas into real, functional, and efficient software. 
               </p>
             </>
           ) : (
