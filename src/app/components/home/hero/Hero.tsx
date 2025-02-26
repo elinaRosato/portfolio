@@ -12,7 +12,7 @@ const Hero = (props: Props) => {
       
       <div className='landscape:absolute z-10 w-1/2 landscape:w-1/4 self-end landscape:top-[24vh] portrait:top-[10vh] mr-[6vw]'>
         <p className=' lg:text-[1.1vw] md-portrait:text-xl text-md leading-tight text-left font-sans font-medium text-dark '>
-          I have strong a passion for all things technology and design. I help brands and companies build meaningful products and create memorable digital experiences from concept to launch.
+          I have a strong passion for all things technology and design. I help brands and companies build meaningful products and create memorable digital experiences from concept to launch.
         </p>
       </div>
       
