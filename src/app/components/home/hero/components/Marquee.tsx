@@ -34,12 +34,12 @@ const Marquee = (props: Props) => {
   return (
     <div className='flex overflow-hidden w-screen'>
       <motion.ul ref={marqueeRef} variants={marqueeVariants}  animate='animate' className=' flex justify-around flex-shrink-0 min-w-full gap-40 px-20'>
-        <AnimatedTitle text="software" className='text-[22vw] lg:text-[14vw] md-portrait:text-12xl leading-none text-transparent font-sans font-bold xl:font-bold text-stroke overflow-hidden flex bg' />
-        <AnimatedTitle text="software" className='text-[22vw] lg:text-[14vw] md-portrait:text-12xl leading-none text-transparent font-sans font-bold xl:font-bold text-stroke overflow-hidden flex' />
+        <AnimatedTitle text="computer" className='text-[22vw] lg:text-[14vw] md-portrait:text-12xl leading-none text-transparent font-sans font-bold xl:font-bold text-stroke overflow-hidden flex bg' />
+        <AnimatedTitle text="computer" className='text-[22vw] lg:text-[14vw] md-portrait:text-12xl leading-none text-transparent font-sans font-bold xl:font-bold text-stroke overflow-hidden flex' />
       </motion.ul>
       <motion.ul variants={marqueeVariants}  animate='animate' className='flex justify-around flex-shrink-0 min-w-full gap-40 px-20' aria-hidden="true">
-        <li className='text-[22vw] lg:text-[14vw] md-portrait:text-12xl leading-none text-transparent font-sans xl:font-bold font-bold text-stroke'>software</li>
-        <li className='text-[22vw] lg:text-[14vw] md-portrait:text-12xl leading-none text-transparent font-sans font-bold xl:font-bold text-stroke'>software</li>
+        <li className='text-[22vw] lg:text-[14vw] md-portrait:text-12xl leading-none text-transparent font-sans xl:font-bold font-bold text-stroke'>computer</li>
+        <li className='text-[22vw] lg:text-[14vw] md-portrait:text-12xl leading-none text-transparent font-sans font-bold xl:font-bold text-stroke'>computer</li>
       </motion.ul>
     </div>
   )

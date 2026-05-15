@@ -14,33 +14,10 @@ const About = (props: Props) => {
       
       <div className={`flex flex-col landscape:flex-row p-[3vw] lg:p-0 justify-center lg:justify-between items-center`}>
         <div className='lg:pr-20'>
-          <div className='flex my-4'>
+{/*           <div className='flex my-4'>
             <button className={`${forClients ? "text-almost-white bg-darkest-dark rounded-full" : "text-darkest-dark bg-almost-white hover:text-darkest-dark hover:bg-almost-white "} mr-4 px-3 py-2 border border-[2px] border-darkest-dark font-regular uppercase text-sm lg:text-[1vw] md-portrait:text-xl leading-normal`} onClick={() => setForClients(true)}>for clients</button>
             <button className={`${!forClients ? "text-almost-white bg-darkest-dark rounded-full" : "text-darkest-dark bg-almost-white hover:text-darkest-dark hover:bg-almost-white "} px-3 py-2 border border-[2px] border-darkest-dark font-regular uppercase text-sm lg:text-[1vw] md-portrait:text-xl leading-normal`} onClick={() => setForClients(false)}>for recruiters</button>
-          </div>
-          {forClients ? (
-            <>
-              <p className='font-regular py-3 text-darkest-dark text-md lg:text-xl leading-snug'>
-                I&rsquo;m Elina Rosato, an extremely curious, creative, and tech-obsessed girl. I dedicate my life to 
-                <strong className='font-black relative hover-trigger inline-block mx-1'>exploring
-                  <img src="snowboard.png" alt="exploring" className='absolute top-[-100%] left-0 hidden hover-image min-w-[200px]' />
-                </strong>
-                , experimenting, and building things that matter. I’ve roamed 10.76% of the world, picked up more 
-                <strong className='font-black relative hover-trigger inline-block mx-1'>hobbies
-                  <img src="crochet2.JPG" alt="hobbies" className='absolute top-[-100%] left-0 hidden hover-image min-w-[200px]' />
-                </strong>
-                than I can keep track of, and somehow found my way into a career that fuses art, logic, and problem-solving.
-              </p> 
-              <p className=' font-regular py-3 text-darkest-dark text-md lg:text-xl leading-snug'>
-                I design, build, and optimize technology-driven solutions that make businesses work smarter. While I appreciate good design, my true expertise lies in 
-                <strong className='font-black relative hover-trigger inline-block mx-1'>software engineering
-                  <img src="programming.gif" alt="programming" className='absolute top-[-100%] left-0 hidden hover-image min-w-[200px]' />
-                </strong>
-                , backend development, and system architecture. Whether you&rsquo;re a startup looking for a custom-built solution or an established brand in need of technical expertise, I help transform complex ideas into real, functional, and efficient software. 
-              </p>
-            </>
-          ) : (
-            <>
+          </div> */}
               <p className=' font-regular py-3 text-darkest-dark text-md lg:text-xl leading-snug'>
                 I’m Elina Rosato, a multidisciplinary computer engineering student specializing in IoT and software development. Originally from 
                 <strong className='font-black relative hover-trigger inline-block mx-1'>Buenos Aires
@@ -59,8 +36,6 @@ const About = (props: Props) => {
                 </strong>
                 was one of my biggest achievements (though graduation next year might top it), and I’m loving every step of the way—soaking up knowledge, refining my skills, and constantly evolving. I have experience developing scalable applications, working with multiple programming languages, and designing efficient, maintainable systems. 
               </p>
-            </>
-          )}
         </div>
         <img className='hidden landscape:block w-1/3' src="desk.png" alt="" />
       </div>

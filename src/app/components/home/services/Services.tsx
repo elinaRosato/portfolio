@@ -17,47 +17,29 @@ const Services = (props: Props) => {
           <ParagraphSmall content={forClients ? "I work with clients to build digital products that are not only functional but also beautiful and user-friendly. Here are some of the services I offer:" : "A breakdown of my technical skills, programming languages, and tools I’m proficient with."} />
         </div>
         <div className=' lg:w-1/2'>
-          <div className='flex mb-8'>
-            <button className={`${forClients ? "text-almost-white bg-darkest-dark rounded-full" : "text-darkest-dark bg-almost-white hover:text-darkest-dark hover:bg-almost-white "} mr-4 px-3 py-2 border border-[2px] border-darkest-dark font-regular uppercase text-sm lg:text-[1vw] md-portrait:text-xl leading-normal`} onClick={() => setForClients(true)}>for clients</button>
-            <button className={`${!forClients ? "text-almost-white bg-darkest-dark rounded-full" : "text-darkest-dark bg-almost-white hover:text-darkest-dark hover:bg-almost-white "} px-3 py-2 border border-[2px] border-darkest-dark font-regular uppercase text-sm lg:text-[1vw] md-portrait:text-xl leading-normal`} onClick={() => setForClients(false)}>for recruiters</button>
+          <div className='py-2'>
+            <ParagraphBig content={"Front-End Development"} />
+            <ParagraphSmall content={"HTML, CSS, JavaScript (ES6+), React.js, Next.js, Tailwind CSS"} />
           </div>
-          {forClients ? (
-            <div className=''>
-              <ParagraphBig content={"Custom Web Development"} />
-              <ParagraphBig content={"Website Application"} />
-              <ParagraphBig content={"E-commerce Solutions"} />
-              <ParagraphBig content={"WordPress & WooCommerce"} />
-              <ParagraphBig content={"Wix Studio Sites"} />
-              <ParagraphBig content={"Front-end Development"} />
-              <ParagraphBig content={"Back-end Development"} />
-            </div>
-          ) : (
-            <>
-              <div className='py-2'>
-                <ParagraphBig content={"Front-End Development"} />
-                <ParagraphSmall content={"HTML, CSS, JavaScript (ES6+), React.js, Next.js, Tailwind CSS"} />
-              </div>
-              <div className='py-2'>
-                <ParagraphBig content={"Back-End Development"} />
-                <ParagraphSmall content={"Node.js, Express.js, RESTful APIs, authentication & databases"} />
-              </div>
-              <div className='py-2'>
-                <ParagraphBig content={"Programming Languages"} />
-                <ParagraphSmall content={"Java, Python, C, JavaScript"} />
-              </div>
-              <div className='py-2'>
-                <ParagraphBig content={"Database Management"} />
-                <ParagraphSmall content={"SQL (MySQL, PostgreSQL), NoSQL (MongoDB, Firebase)"} />
-              </div>
-              <div className='py-2'>
-                <ParagraphBig content={"Unit & Integration Testing"} />
-              </div>
-              <div className='py-2'>
-                <ParagraphBig content={"Version Control & Deployment"} />
-                <ParagraphSmall content={"Git, GitHub, CI/CD, Vercel, Docker"} />
-              </div>
-            </>
-          )}        
+          <div className='py-2'>
+            <ParagraphBig content={"Back-End Development"} />
+            <ParagraphSmall content={"Node.js, Express.js, RESTful APIs, authentication & databases"} />
+          </div>
+          <div className='py-2'>
+            <ParagraphBig content={"Programming Languages"} />
+            <ParagraphSmall content={"Java, Python, C, JavaScript"} />
+          </div>
+          <div className='py-2'>
+            <ParagraphBig content={"Database Management"} />
+            <ParagraphSmall content={"SQL (MySQL, PostgreSQL), NoSQL (MongoDB, Firebase)"} />
+          </div>
+          <div className='py-2'>
+            <ParagraphBig content={"Unit & Integration Testing"} />
+          </div>
+          <div className='py-2'>
+            <ParagraphBig content={"Version Control & Deployment"} />
+            <ParagraphSmall content={"Git, GitHub, CI/CD, Vercel, Docker"} />
+          </div>     
         </div>
       </div>
     </section>

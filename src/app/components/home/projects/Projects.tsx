@@ -19,6 +19,34 @@ type Props = {}
 const ProjectsSection = (props: Props) => {
   const projects: Project[] = [
     {
+      title: 'Autonomous Drone Navigation',
+      subtitle: 'Reinforcement learning powered drone navigation in forest environments',
+      src: '/drone_thumbnail.png',
+      bgColor: '#C6DAE2',
+      href: '/projects/drone'
+    },
+    {
+      title: 'Smart Door System',
+      subtitle: 'IoT access-control system using Raspberry Pi and AWS facial recognition',
+      src: '/smart-door-system.jpg',
+      bgColor: '#C6DAE2',
+      href: '/projects/door-system'
+    },
+    {
+      title: 'Smart Plant Monitor',
+      subtitle: '',
+      src: '/smart-plant-monitor_thumbnail.jpg',
+      bgColor: '#C6DAE2',
+      href: '/projects/plant-monitor'
+    },
+    {
+      title: 'Teamely',
+      subtitle: 'Cross-platform mobile app for team management and schedule tracking',
+      src: '/teamely_thumbnail.png',
+      bgColor: '#C6DAE2',
+      href: '/projects/teamely'
+    },
+    {
       title: 'Popping Bubbles Game',
       subtitle: 'computer game built with javascript',
       src: '/poppingbubbles.png',
