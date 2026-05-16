@@ -8,7 +8,7 @@ const ParagraphBig = ({ content } : { content: String }) => {
       text-left 
       font-sans 
       font-medium 
-      text-dark
+      text-darkest-dark
     '>
       {content}
     </p>

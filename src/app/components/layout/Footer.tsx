@@ -11,7 +11,7 @@ const Footer = (props: Props) => {
       <div className='flex flex-col lg:flex-row justify-between py-10 lg:py-20'>
         <div className='pb-10'>
           <p className='text-lg text-slate-400'>status</p>
-          <p className='text-lg'><span className='pr-2 text-green-500'>●</span>open to work</p>
+          <p className='text-lg text-darkest-dark'><span className='pr-2 text-green-500'>●</span>open to work</p>
         </div>
         <div className='md:flex md:w-3/4 justify-between'>
           <div className='pb-5'>

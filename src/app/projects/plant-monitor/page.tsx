@@ -21,47 +21,45 @@ interface Controls {
   next: Control
 }
 
-const SmartDoorSystem = () => {
+const SmartPlantMonitor = () => {
 
-  const projectTitle: string[] = ['Smart Door', 'System']
+  const projectTitle: string[] = ['Smart Plant', 'Monitor']
 
   const projectSummary: string =
-    'An IoT smart access-control system built with Raspberry Pi 5, OpenCV, and AWS Rekognition. The system captures visitors at the door, performs cloud face recognition, and grants or denies access through GPIO-controlled LEDs.'
+    'A bare-metal embedded systems project built in C on the ATmega328P featuring a non-blocking state machine, real-time sensor monitoring, interrupt-driven architecture, and UART telemetry.'
 
-  const code: string =
-    'https://github.com/elinaRosato/iot-smart-door-system'
-
+  const code: string = 'https://github.com/elinaRosato/smart_plant_monitor'
   const demo: string = ''
 
   const images: Images[] = [
     {
-      src: '/smart-door-system.jpg',
-      alt: 'Smart Door System Raspberry Pi Setup',
+      src: '/smart-plant-monitor.jpg',
+      alt: 'Smart Plant Monitor overview',
       mobile: false,
     },
     {
-      src: '/smart-door-system.jpg',
-      alt: 'Smart Door System Request Flow Diagram',
+      src: '/circuit-diagram.png',
+      alt: 'Breadboard and hardware setup',
       mobile: false,
     },
     {
-      src: '/smart-door-system.jpg',
-      alt: 'USB Camera Connected to Raspberry Pi',
-      mobile: false,
-    },
-    {
-      src: '/smart-door-system.jpg',
-      alt: 'GPIO LED Access Indicators',
+      src: '/smart-plant-monitor.jpg',
+      alt: 'LCD sensor display',
       mobile: true,
     },
     {
-      src: '/smart-door-system.jpg',
-      alt: 'Recognition Logs in Terminal',
+      src: '/circuit-diagram.png',
+      alt: 'UART serial telemetry output',
       mobile: false,
     },
     {
-      src: '/smart-door-system.jpg',
-      alt: 'Edge-to-cloud Architecture Diagram',
+      src: '/smart-plant-monitor.jpg',
+      alt: 'Embedded C firmware architecture',
+      mobile: false,
+    },
+    {
+      src: '/circuit-diagram.png',
+      alt: 'Circuit schematic and components',
       mobile: false,
     },
   ]
@@ -72,121 +70,221 @@ const SmartDoorSystem = () => {
       type: 'h2',
       content: 'The Background',
     },
+
     {
       type: 'p',
-      content: `Smart Door System was developed as part of my IoT Systems Design coursework at Kristianstad University. The goal was to build a real-world edge-to-cloud system capable of recognising visitors through facial recognition and controlling physical hardware through GPIO on a Raspberry Pi.`,
+      content: `This project started as an exploration into low-level embedded systems programming and real-time firmware architecture. I wanted to move beyond high-level Arduino abstractions and understand how microcontrollers actually work at the register level.`,
     },
+
     {
       type: 'p',
-      content: `I wanted the project to feel like an actual smart-home product rather than a simple classroom prototype. That meant focusing not only on the facial recognition itself, but also on architecture, modularity, security, hardware interaction, and user feedback.`,
+      content: `The result was a standalone environmental monitoring system for houseplants built entirely in bare-metal C on the ATmega328P microcontroller.`,
     },
+
+    {
+      type: 'p',
+      content: `The system continuously monitors soil moisture, ambient light, temperature, and humidity while displaying live data on a 16×2 LCD and streaming telemetry over UART.`,
+    },
+
+    {
+      type: 'h2',
+      content: 'The Goal',
+    },
+
+    {
+      type: 'p',
+      content: `The objective was not only to build a useful monitoring device, but also to design a responsive embedded firmware architecture without relying on blocking delays or high-level frameworks.`,
+    },
+
+    {
+      type: 'p',
+      content: `I wanted the system to handle multiple sensors, interrupts, user input, LCD updates, and serial logging simultaneously while remaining responsive and modular.`,
+    },
+
     {
       type: 'h2',
       content: 'The Stack',
     },
+
     {
       type: 'p',
-      content: `The system runs on a Raspberry Pi 5 using Python 3.13. OpenCV handles USB camera integration and image capture, while gpiozero manages the physical GPIO interactions for LEDs and the doorbell button.`,
+      content: `The project was built in C using PlatformIO targeting the ATmega328P running at 16 MHz on an Arduino Uno.`,
     },
+
     {
       type: 'p',
-      content: `For cloud machine learning, the project uses AWS Rekognition collections. Instead of training a custom model locally, AWS handles face embeddings and similarity matching through managed APIs such as search_faces_by_image and index_faces.`,
+      content: `Sensor data was collected through analog ADC reads and a custom-written DHT11 single-wire communication driver implemented entirely through direct register manipulation.`,
     },
+
     {
       type: 'p',
-      content: `The architecture follows a clean modular design where each subsystem has a dedicated responsibility: camera handling, GPIO control, and cloud recognition are separated into individual services orchestrated by a lightweight main controller.`,
+      content: `The firmware uses Timer1 interrupts in CTC mode to coordinate system timing, while UART telemetry streams formatted sensor data at 9600 baud.`,
     },
+
+    {
+      type: 'p',
+      content: `The LCD runs in 4-bit mode using direct PORTB communication to reduce GPIO usage and improve hardware efficiency.`,
+    },
+
+    {
+      type: 'h2',
+      content: 'The Architecture',
+    },
+
+    {
+      type: 'p',
+      content: `The entire system follows a non-blocking, flag-driven architecture.`,
+    },
+
+    {
+      type: 'p',
+      content: `Instead of using delay-based programming, a Timer1 interrupt fires once per second and updates a set of volatile flags shared with the main loop.`,
+    },
+
+    {
+      type: 'p',
+      content: `The main loop continuously polls these flags and executes short tasks such as sensor reads, LCD updates, error handling, and UART logging.`,
+    },
+
+    {
+      type: 'p',
+      content: `This design keeps the system responsive even while juggling multiple interrupt sources, user inputs, and sensor updates simultaneously.`,
+    },
+
     {
       type: 'h2',
       content: 'The Challenge',
     },
+
     {
       type: 'p',
-      content: `One of the biggest challenges was balancing hardware interaction with cloud communication. The system needed to feel responsive while still depending on an external cloud service for recognition.`,
+      content: `One of the hardest parts of the project was implementing reliable timing-sensitive communication with the DHT11 sensor.`,
     },
+
     {
       type: 'p',
-      content: `Camera stability was another challenge. USB webcams often return dark or unstable frames immediately after startup, so I implemented a warm-up sequence with discarded frames before each capture to stabilise exposure and improve reliability.`,
+      content: `The DHT11 uses a custom single-wire protocol where bits are encoded through pulse timing measured in microseconds. I implemented the protocol manually using direct AVR register access and carefully timed signal reads.`,
     },
+
     {
       type: 'p',
-      content: `I also had to think carefully about security and infrastructure concerns. AWS credentials were isolated in environment variables, IAM permissions were restricted to only the Rekognition operations required, and the project documentation included recommendations for MFA, billing alerts, and CloudTrail auditing.`,
+      content: `Another challenge was coordinating several interrupt sources cleanly without introducing blocking behavior or race conditions between the interrupt context and the main application loop.`,
     },
+
     {
       type: 'h2',
       content: 'Features',
     },
+
     {
       type: 'p',
-      content: `👾 Doorbell-triggered face recognition pipeline.`,
+      content: `👾 Real-time monitoring of soil moisture, light, temperature, and humidity.`,
     },
+
     {
       type: 'p',
-      content: `👾 Raspberry Pi GPIO integration with green/red access LEDs.`,
+      content: `👾 Non-blocking firmware architecture using Timer1 interrupts and flag polling.`,
     },
+
     {
       type: 'p',
-      content: `👾 AWS Rekognition cloud face matching against indexed family members.`,
+      content: `👾 Custom DHT11 bit-banged communication driver.`,
     },
+
     {
       type: 'p',
-      content: `👾 Modular Python architecture with separated hardware and cloud services.`,
+      content: `👾 UART telemetry logging at 9600 baud.`,
     },
+
     {
       type: 'p',
-      content: `👾 Local access logging with timestamps, similarity scores, and access decisions.`,
+      content: `👾 HD44780 LCD operating in 4-bit mode.`,
     },
+
     {
       type: 'p',
-      content: `👾 Secure credential handling using .env and least-privilege IAM policies.`,
+      content: `👾 Multiple interrupt sources including Timer1, external interrupts, and pin-change interrupts.`,
     },
+
     {
       type: 'p',
-      content: `👾 Real measured performance metrics including 98.5% recognition accuracy and 2.3 second average response time.`,
+      content: `👾 LED and buzzer based environmental alerts.`,
     },
+
+    {
+      type: 'p',
+      content: `👾 Manual sensor selection through hardware buttons.`,
+    },
+
     {
       type: 'h2',
-      content: 'Architecture',
+      content: 'Hardware',
     },
+
     {
       type: 'p',
-      content: `The project follows an edge-to-cloud architecture. The Raspberry Pi handles physical hardware interaction and image capture locally, while AWS Rekognition performs cloud-based facial recognition.`,
+      content: `The hardware stack includes an ATmega328P microcontroller, a DHT11 temperature and humidity sensor, a soil moisture probe, a photoresistor for ambient light detection, a 16×2 LCD, LEDs, push buttons, and a piezo buzzer.`,
     },
+
     {
       type: 'p',
-      content: `When the visitor presses the button, the system captures an image using OpenCV, sends it securely to AWS Rekognition through boto3, and receives the best facial match result. Depending on the confidence score, the system either grants or denies access through GPIO-controlled LEDs.`,
+      content: `All peripherals were connected directly through AVR GPIO and configured manually through register-level programming rather than Arduino libraries.`,
     },
-    {
-      type: 'p',
-      content: `This approach kept the Raspberry Pi lightweight while still allowing the project to leverage production-grade machine learning infrastructure.`,
-    },
+
     {
       type: 'h2',
-      content: 'Results & Learnings',
+      content: 'Results',
     },
+
     {
       type: 'p',
-      content: `This project taught me how to connect software engineering with physical systems. It strengthened my understanding of hardware integration, cloud APIs, system architecture, and real-world software design decisions.`,
+      content: `The final system successfully monitored environmental conditions in real time while maintaining responsive performance through a fully non-blocking firmware architecture.`,
     },
+
     {
       type: 'p',
-      content: `More importantly, it showed me how powerful IoT systems become when edge devices and cloud services work together. The project started as a coursework assignment, but it evolved into one of the most technically complete systems I have built so far.`,
+      content: `The Timer1-driven state machine allowed multiple sensors, interrupts, display updates, and UART communication to coexist without freezing the application loop.`,
+    },
+
+    {
+      type: 'p',
+      content: `Most importantly, this project became a deep introduction to embedded systems engineering, low-level firmware design, hardware communication protocols, and real-time software architecture.`,
+    },
+
+    {
+      type: 'h2',
+      content: 'What I Learned',
+    },
+
+    {
+      type: 'p',
+      content: `This project taught me how embedded systems work beneath high-level frameworks. I gained hands-on experience with timers, interrupts, ADCs, UART communication, GPIO control, hardware protocols, and memory-safe firmware design.`,
+    },
+
+    {
+      type: 'p',
+      content: `It also reinforced the importance of architecture in embedded software. Small design choices — like using flags instead of delays or keeping ISRs lightweight — dramatically affect responsiveness, scalability, and reliability.`,
+    },
+
+    {
+      type: 'p',
+      content: `Building everything at the register level gave me a much deeper understanding of how microcontrollers operate internally and how software interacts directly with hardware.`,
     },
 
    /*  {
       type: 'video',
-      content: 'smartdoor_demo.mp4',
+      content: 'plant_monitor_demo.mp4',
     }, */
   ]
 
   const controls: Controls = {
     previous: {
-      project: 'Phonebook',
-      href: '/projects/phonebook',
+      project: 'Smart Door System',
+      href: '/projects/door-system',
     },
     next: {
-      project: 'Popping Bubbles',
-      href: '/projects/poppingbubbles',
+      project: 'Teamely',
+      href: '/projects/teamely',
     },
   }
 
@@ -208,4 +306,4 @@ const SmartDoorSystem = () => {
   )
 }
 
-export default SmartDoorSystem
+export default SmartPlantMonitor

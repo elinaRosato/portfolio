@@ -37,9 +37,9 @@ module.exports = {
         '2xl-landscape': { 'raw': '(min-width: 1536px) and (orientation: landscape)' },
       },
       colors: {
-        'darkest-dark': '#202124',
+        'darkest-dark': '#f0eff5',
         'accent': '#3682fd',
-        'almost-white': '#f0eff5'
+        'almost-white': '#202124'
       },
       width: {
         '128': '32rem',

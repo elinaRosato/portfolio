@@ -28,13 +28,13 @@ const ProjectsSection = (props: Props) => {
     {
       title: 'Smart Door System',
       subtitle: 'IoT access-control system using Raspberry Pi and AWS facial recognition',
-      src: '/smart-door-system.jpg',
+      src: '/smart-door-system_thumbnail.jpg',
       bgColor: '#C6DAE2',
       href: '/projects/door-system'
     },
     {
       title: 'Smart Plant Monitor',
-      subtitle: '',
+      subtitle: 'Embedded monitoring system built in C with interrupts and real-time sensor tracking',
       src: '/smart-plant-monitor_thumbnail.jpg',
       bgColor: '#C6DAE2',
       href: '/projects/plant-monitor'
