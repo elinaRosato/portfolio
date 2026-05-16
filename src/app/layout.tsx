@@ -5,11 +5,8 @@ import Footer from './components/layout/Footer';
 import EmailButton from './components/layout/ButtonEmail';
 
 export const metadata: Metadata = {
-  title: 'Elina Rosato | Software Engineer',
-  description: 'Software Engineer Portfolio',
-  icons: {
-    icon: '/favicon-portfolio.png',
-  },
+  title: 'Elina Rosato | Computer Engineer',
+  description: 'Computer Engineer Portfolio',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode; }) {
