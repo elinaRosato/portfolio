@@ -15,25 +15,23 @@ const Footer = (props: Props) => {
         </div>
         <div className='md:flex md:w-3/4 justify-between'>
           <div className='pb-5'>
-            <SectionTitle content={"menu"} />
+            <SectionTitle content={"navigation"} />
             <a className='block my-3' href="#about"><ParagraphSmall content={"My Story"}/></a>
-            <a className='block my-3' href="#cases"><ParagraphSmall content={"Case Studies"}/></a>
-            <a className='block my-3' href="#projects"><ParagraphSmall content={"Personal Work"}/></a>
+            <a className='block my-3' href="#projects"><ParagraphSmall content={"My Projects"}/></a>
             <a className='block my-3' href="#services"><ParagraphSmall content={"My Jam"}/></a>
             <a className='block my-3' href="#contact"><ParagraphSmall content={"Let's Connect"}/></a>
           </div>
           <div className='pb-5'>
-            <SectionTitle content={"case studies"} />
-            <a className='block my-3' href="/cases/haparanda"><ParagraphSmall content={"Haparanda"}/></a>
-            <a className='block my-3' href="/cases/3dcenter"><ParagraphSmall content={"3DCenter"}/></a>
-            <a className='block my-3' href="/cases/orthoteam"><ParagraphSmall content={"OrthoTeam"}/></a>
-            <a className='block my-3' href="/cases/baccello"><ParagraphSmall content={"Baccello"}/></a>
-          </div>
-          <div className='pb-5'>
-            <SectionTitle content={"personal work"} />
+            <SectionTitle content={"my projects"} />
+            <a className='block my-3' href="/projects/drone"><ParagraphSmall content={"Autonomous Forest Drone"}/></a>
+            <a className='block my-3' href="/projects/door-system"><ParagraphSmall content={"Smart Door System"}/></a>
+            <a className='block my-3' href="/projects/plant-monitor"><ParagraphSmall content={"Smart Plant Monitor"}/></a>
+            <a className='block my-3' href="/projects/teamely"><ParagraphSmall content={"Teamely"}/></a>
             <a className='block my-3' href="/projects/poppingbubbles"><ParagraphSmall content={"Popping Bubbles"}/></a>
-            <a className='block my-3' href="/projects/phonebook"><ParagraphSmall content={"Phonebook App"}/></a>
-            <a className='block my-3' href="/projects/todolist"><ParagraphSmall content={"To-Do List App"}/></a>
+          </div>
+          <div className='pb-10'>
+            <p className='text-lg text-slate-400'>check my web dev studio @</p>
+            <p className='text-lg text-darkest-dark hover:text-accent'><a href="https://elinarosato.studio">elinarosato.studio</a></p>
           </div>
         </div>
       </div>

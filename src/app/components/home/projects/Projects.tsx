@@ -73,7 +73,7 @@ const ProjectsSection = (props: Props) => {
 
   return (
     <section id='projects' className='relative px-[7vw] lg:px-[7vw] py-20 lg:py-36 flex flex-col lg:items-center' >
-      <SectionTitle content="personal work" />
+      <SectionTitle content="my projects" />
       <SectionHeading content="Things I’ve built, broken, and learned from." />
       <div className='flex flex-col lg:flex-row lg:pt-20'>
         <div className='lg:w-1/3 lg:pr-14'>
