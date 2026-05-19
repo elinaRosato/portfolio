@@ -96,8 +96,8 @@ const PoppingBubbles = (props: Props) => {
   ]
   const controls: Controls = {
     previous: {
-      project: '',
-      href: ''
+      project: 'Teamely',
+      href: '/projects/teamely',
     },
     next: {
       project: 'Phonebook',
