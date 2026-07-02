@@ -30,6 +30,7 @@ const ForestDroneNavigation = () => {
 
   const code: string = ''
   const demo: string = ''
+  const thesis: string = '/ElinaRosato_Thesis.pdf'
 
   const images: Images[] = [
     {
@@ -73,7 +74,7 @@ const ForestDroneNavigation = () => {
 
     {
       type: 'p',
-      content: `This project began as our Computer Engineering thesis at Lund University. Together with my thesis partner, we explored one of the most challenging problems in robotics and autonomous systems: enabling drones to navigate forests without GPS.`,
+      content: `This project began as our Computer Engineering bachelor thesis at Kristianstad University. Together with my thesis partner, we explored one of the most challenging problems in robotics and autonomous systems: enabling drones to navigate forests without GPS.`,
     },
 
     {
@@ -260,6 +261,7 @@ const ForestDroneNavigation = () => {
         projectSummary={projectSummary}
         code={code}
         demo={demo}
+        thesis={thesis}
         images={images}
         projectContent={projectContent}
         controls={controls}

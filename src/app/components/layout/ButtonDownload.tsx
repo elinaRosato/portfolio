@@ -5,7 +5,7 @@ type Props = {}
 function ButtonDownload({}: Props) {
   const handleDownload = () => {
     // Path to your PDF file in the public folder
-    const pdfPath = '/ElinaRosato_cv.pdf'
+    const pdfPath = '/ElinaRosato_CV.pdf'
 
     // Fetch the PDF file and create a Blob
     fetch(pdfPath)
