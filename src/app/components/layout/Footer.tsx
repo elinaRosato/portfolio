@@ -16,10 +16,10 @@ const Footer = (props: Props) => {
         <div className='md:flex md:w-3/4 justify-between'>
           <div className='pb-5'>
             <SectionTitle content={"navigation"} />
-            <a className='block my-3' href="#about"><ParagraphSmall content={"My Story"}/></a>
-            <a className='block my-3' href="#projects"><ParagraphSmall content={"My Projects"}/></a>
-            <a className='block my-3' href="#services"><ParagraphSmall content={"My Jam"}/></a>
-            <a className='block my-3' href="#contact"><ParagraphSmall content={"Let's Connect"}/></a>
+            <a className='block my-3' href="/#about"><ParagraphSmall content={"My Story"}/></a>
+            <a className='block my-3' href="/#projects"><ParagraphSmall content={"My Projects"}/></a>
+            <a className='block my-3' href="/#services"><ParagraphSmall content={"My Jam"}/></a>
+            <a className='block my-3' href="/#contact"><ParagraphSmall content={"Let's Connect"}/></a>
           </div>
           <div className='pb-5'>
             <SectionTitle content={"my projects"} />
@@ -37,7 +37,7 @@ const Footer = (props: Props) => {
       </div>
       
       <div className='flex justify-center items-center'>
-        <ParagraphBig content={"2025 © Elina Rosato Studio"} />
+        <ParagraphBig content={"2026 © Elina Rosato"} />
       </div>
     </footer>
   )
